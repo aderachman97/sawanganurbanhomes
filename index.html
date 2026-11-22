@@ -645,6 +645,77 @@
                 </div>
 
             </div>
+
+            <!-- Interactive Rent vs Buy Calculator Widget (Fitur Sempurnakan Sewa vs Beli) -->
+            <div class="mt-12 bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-xl max-w-4xl mx-auto">
+                <div class="text-center mb-8">
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-100 text-amber-900 text-xs font-bold uppercase tracking-wide">
+                        <i data-lucide="calculator" class="w-3.5 h-3.5 text-amber-700"></i>
+                        <span>Kalkulator Interaktif: Sewa Kontrakan vs Miliki Sendiri</span>
+                    </span>
+                    <h3 class="text-xl sm:text-2xl font-black text-slate-900 mt-2">
+                        Hitung Berapa Uang yang Hangus Jika Anda Terus Menyewa
+                    </h3>
+                    <p class="text-xs sm:text-sm text-slate-500 mt-1">
+                        Geser slider di bawah sesuai perkiraan sewa bulanan Anda dan bandingkan dengan kepemilikan aset rumah sendiri:
+                    </p>
+                </div>
+
+                <div class="space-y-6">
+                    <!-- Slider 1: Biaya Sewa Bulanan -->
+                    <div>
+                        <div class="flex items-center justify-between text-xs sm:text-sm font-bold text-slate-700 mb-2">
+                            <span>Biaya Sewa / Kontrakan Saat Ini:</span>
+                            <span class="text-base sm:text-lg font-black text-amber-600 font-mono" id="displayRentVal">Rp 3.000.000 / bln</span>
+                        </div>
+                        <input type="range" id="sliderRent" min="1500000" max="6000000" step="250000" value="3000000" oninput="calculateRentVsBuy()" class="w-full h-2.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-amber-500">
+                        <div class="flex justify-between text-[11px] text-slate-400 mt-1 font-mono">
+                            <span>Rp 1,5 Jt</span>
+                            <span>Rp 3,5 Jt</span>
+                            <span>Rp 6 Jt</span>
+                        </div>
+                    </div>
+
+                    <!-- Slider 2: Durasi Waktu Menyewa -->
+                    <div>
+                        <div class="flex items-center justify-between text-xs sm:text-sm font-bold text-slate-700 mb-2">
+                            <span>Estimasi Durasi Waktu:</span>
+                            <span class="text-base sm:text-lg font-black text-slate-900 font-mono" id="displayYearsVal">5 Tahun</span>
+                        </div>
+                        <div class="grid grid-cols-3 gap-3">
+                            <button type="button" onclick="setRentYears(3, this)" class="rent-year-btn py-2.5 rounded-xl border border-slate-200 text-slate-700 font-bold text-xs sm:text-sm hover:border-brand-500 transition">3 Tahun</button>
+                            <button type="button" onclick="setRentYears(5, this)" class="rent-year-btn py-2.5 rounded-xl border-2 border-brand-900 bg-brand-900 text-white font-extrabold text-xs sm:text-sm shadow-sm transition">5 Tahun</button>
+                            <button type="button" onclick="setRentYears(10, this)" class="rent-year-btn py-2.5 rounded-xl border border-slate-200 text-slate-700 font-bold text-xs sm:text-sm hover:border-brand-500 transition">10 Tahun</button>
+                        </div>
+                    </div>
+
+                    <!-- Comparison Result Card -->
+                    <div class="grid sm:grid-cols-2 gap-4 pt-4">
+                        <div class="p-5 rounded-2xl bg-rose-50 border border-rose-200 text-left">
+                            <span class="text-xs font-bold uppercase text-rose-700 block mb-1">Jika Tetap Menyewa</span>
+                            <div class="text-2xl sm:text-3xl font-black text-rose-600 font-mono" id="calcRentLoss">Rp 180.000.000</div>
+                            <p class="text-xs text-rose-800/80 mt-1.5 font-medium">Uang menguap 100% ke pemilik kontrakan tanpa ada aset sepeser pun tersisa.</p>
+                        </div>
+                        <div class="p-5 rounded-2xl bg-emerald-50 border border-emerald-200 text-left">
+                            <span class="text-xs font-bold uppercase text-emerald-800 block mb-1">Di Sawangan Urban Homes</span>
+                            <div class="text-2xl sm:text-3xl font-black text-emerald-700 font-mono" id="calcAssetGain">Rp 650.000.000+</div>
+                            <p class="text-xs text-emerald-800/80 mt-1.5 font-medium">Nilai estimasi aset rumah 2 lantai milik sendiri (cicilan bulanan jadi tabungan riil).</p>
+                        </div>
+                    </div>
+
+                    <!-- Bottom Action -->
+                    <div class="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
+                        <button onclick="openSurveyModal('Konsultasi Stop Sewa - Beli Rumah Sendiri')" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-emerald-500 to-wa-500 hover:from-emerald-600 hover:to-wa-600 text-white font-black py-3.5 px-6 rounded-xl shadow-lg transition text-xs sm:text-sm">
+                            <i data-lucide="home" class="w-4 h-4"></i>
+                            <span>Stop Sewa Sekarang: Konsultasi KPR Mulai 2,8 Jt/bln</span>
+                        </button>
+                        <button onclick="shareWithPartner()" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold py-3.5 px-5 rounded-xl border border-slate-300 transition text-xs sm:text-sm">
+                            <i data-lucide="share-2" class="w-4 h-4 text-emerald-600"></i>
+                            <span>Ajak Pasangan Diskusi</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -2130,6 +2201,42 @@
         </div>
     </section>
 
+    <!-- SECTION: WEEKEND OPEN HOUSE & COFFEE DAY INVITATION -->
+    <section class="py-12 bg-gradient-to-r from-amber-500 via-brand-500 to-amber-600 text-slate-900 border-y border-amber-400">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-slate-950 text-white rounded-3xl p-6 sm:p-10 shadow-2xl border-2 border-amber-400/40 flex flex-col lg:flex-row items-center justify-between gap-8 relative overflow-hidden">
+                <div class="absolute -right-10 -bottom-10 w-64 h-64 bg-amber-400/10 rounded-full blur-3xl pointer-events-none"></div>
+                <div class="space-y-3 text-center lg:text-left z-10 max-w-xl">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-400/20 text-amber-300 text-xs font-bold uppercase tracking-wider border border-amber-400/30">
+                        <i data-lucide="coffee" class="w-3.5 h-3.5 text-amber-400"></i>
+                        <span>Weekend Open House &amp; Coffee Day</span>
+                    </div>
+                    <h3 class="text-2xl sm:text-3xl font-black text-white leading-tight">
+                        Kunjungi Langsung Lokasi Sabtu &amp; Minggu Ini
+                    </h3>
+                    <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                        Nikmati racikan kopi hangat gratis di lokasi sambil merasakan langsung sejuknya mezanin void, ketenangan cluster Jl. H. Jawi, dan konsultasi legalitas bersama tim developer.
+                    </p>
+                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-1 text-xs text-amber-300 font-semibold">
+                        <span class="flex items-center gap-1.5"><i data-lucide="calendar" class="w-4 h-4 text-emerald-400"></i> Buka Sabtu &amp; Minggu (09.00 - 17.30)</span>
+                        <span class="flex items-center gap-1.5"><i data-lucide="gift" class="w-4 h-4 text-amber-400"></i> Bonus Free AC Tiap Kamar Khusus Booking di Tempat*</span>
+                    </div>
+                </div>
+
+                <div class="shrink-0 w-full lg:w-auto z-10 flex flex-col sm:flex-row items-center gap-3">
+                    <button onclick="openSurveyModal('RSVP Weekend Open House & Coffee Day')" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-amber-400 to-amber-300 hover:from-amber-300 hover:to-amber-200 text-brand-900 font-black px-7 py-4 rounded-xl shadow-xl transition text-sm">
+                        <i data-lucide="calendar-check" class="w-5 h-5"></i>
+                        <span>RSVP Hadir Open House (WA)</span>
+                    </button>
+                    <button onclick="shareWithPartner()" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold px-5 py-4 rounded-xl backdrop-blur-md transition text-xs sm:text-sm">
+                        <i data-lucide="share-2" class="w-4 h-4 text-emerald-400"></i>
+                        <span>Ajak Pasangan</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- NEW SECTION: CUSTOMER STORIES / EMOTIONAL SOCIAL PROOF (Item 5) -->
     <section id="testimoni" class="py-16 sm:py-24 bg-white border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -2440,20 +2547,19 @@
         </div>
     </footer>
 
-    <!-- FLOATING WHATSAPP BUTTON (Responsive Desktop & Mobile) -->
+    <!-- FLOATING WHATSAPP BUTTON (Smart Round-Robin & UTM Enabled) -->
     <div id="floatingWaContainer" class="fixed bottom-20 right-4 sm:bottom-8 sm:right-8 z-50 flex items-center gap-3">
         <!-- Floating Speech Bubble / Tooltip (Desktop) -->
-        <a href="https://wa.me/6281911590700?text=Halo%20Admin%20Sawangan%20Urban%20Homes,%20saya%20mau%20tanya%20pricelist%20dan%20jadwal%20survey%20lokasi."
-            target="_blank"
-            class="group hidden sm:flex items-center gap-2 bg-white text-slate-800 text-xs font-bold py-2.5 px-4 rounded-2xl shadow-xl border border-slate-200/90 hover:border-wa-500 transition duration-300 transform hover:-translate-x-1">
+        <button onclick="routeWhatsApp('Halo Admin Sawangan Urban Homes, saya mau tanya pricelist dan jadwal survey lokasi.')"
+            class="group hidden sm:flex items-center gap-2 bg-white text-slate-800 text-xs font-bold py-2.5 px-4 rounded-2xl shadow-xl border border-slate-200/90 hover:border-wa-500 transition duration-300 transform hover:-translate-x-1 cursor-pointer">
             <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-            <span>Online! Butuh info & survey? <strong class="text-emerald-700">Chat Sales</strong></span>
-        </a>
+            <span>Online! Butuh info &amp; survey? <strong class="text-emerald-700">Chat Sales</strong></span>
+        </button>
 
         <!-- Floating Button Circle -->
-        <a href="https://wa.me/6281911590700?text=Halo%20Admin%20Sawangan%20Urban%20Homes,%20saya%20mau%20tanya%20pricelist%20dan%20jadwal%20survey%20lokasi."
-            target="_blank" aria-label="Chat WhatsApp Sales Sawangan Urban Homes"
-            class="relative group w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-tr from-emerald-600 via-wa-500 to-emerald-500 text-white flex items-center justify-center shadow-2xl shadow-emerald-500/40 hover:shadow-emerald-500/60 transform hover:scale-105 active:scale-95 transition-all duration-300">
+        <button onclick="routeWhatsApp('Halo Admin Sawangan Urban Homes, saya mau tanya pricelist dan jadwal survey lokasi.')"
+            aria-label="Chat WhatsApp Sales Sawangan Urban Homes"
+            class="relative group w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-tr from-emerald-600 via-wa-500 to-emerald-500 text-white flex items-center justify-center shadow-2xl shadow-emerald-500/40 hover:shadow-emerald-500/60 transform hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer">
             <!-- Pulsing Radar Wave -->
             <span
                 class="absolute inset-0 rounded-full bg-emerald-500 animate-ping opacity-30 pointer-events-none"></span>
@@ -2466,6 +2572,7 @@
 
             <!-- Online status green dot badge -->
             <span class="absolute top-0 right-0 w-4 h-4 bg-emerald-400 border-2 border-white rounded-full"></span>
+        </button>
         </a>
     </div>
 
@@ -2775,6 +2882,121 @@
         // Init Lucide Icons
         lucide.createIcons();
 
+        // 0. ADVANCED MARKETING ENGINE: UTM Auto-Capture & Smart CS Round-Robin
+        const urlParams = new URLSearchParams(window.location.search);
+        const utmSource = urlParams.get('utm_source') || sessionStorage.getItem('suh_utm_source') || '';
+        const utmMedium = urlParams.get('utm_medium') || sessionStorage.getItem('suh_utm_medium') || '';
+        const utmCampaign = urlParams.get('utm_campaign') || sessionStorage.getItem('suh_utm_campaign') || '';
+
+        if (utmSource) sessionStorage.setItem('suh_utm_source', utmSource);
+        if (utmMedium) sessionStorage.setItem('suh_utm_medium', utmMedium);
+        if (utmCampaign) sessionStorage.setItem('suh_utm_campaign', utmCampaign);
+
+        function formatUtmTag() {
+            if (!utmSource && !utmCampaign) return '\n\n📌 Ref: Web Sawangan Urban Homes';
+            return `\n\n📌 Ref Sumber Iklan: ${utmSource}${utmCampaign ? ' (' + utmCampaign + ')' : ''}`;
+        }
+
+        const salesHotlines = [
+            { name: "CS Rani (Marketing Executive)", phone: "6281911590700", display: "0819 1159 0700" },
+            { name: "CS Dimas (Marketing Consultant)", phone: "6281282793135", display: "0812 8279 3135" }
+        ];
+
+        function getNextSalesAgent() {
+            let idx = parseInt(localStorage.getItem('suh_cs_idx') || '0', 10);
+            const agent = salesHotlines[idx % salesHotlines.length];
+            localStorage.setItem('suh_cs_idx', (idx + 1) % salesHotlines.length);
+            return agent;
+        }
+
+        function routeWhatsApp(message, targetPhone = null) {
+            const phone = targetPhone || getNextSalesAgent().phone;
+            const fullMessage = message + formatUtmTag();
+            window.open(`https://wa.me/${phone}?text=${encodeURIComponent(fullMessage)}`, '_blank');
+        }
+
+        // Realtime Lead Storage & Webhook Engine
+        function saveLeadData(lead) {
+            try {
+                const existing = JSON.parse(localStorage.getItem('suh_leads') || '[]');
+                existing.push({
+                    ...lead,
+                    timestamp: new Date().toLocaleString('id-ID'),
+                    utm_source: utmSource || 'Direct / Organic',
+                    utm_campaign: utmCampaign || '-'
+                });
+                localStorage.setItem('suh_leads', JSON.stringify(existing));
+                
+                if (window.SUH_WEBHOOK_URL) {
+                    fetch(window.SUH_WEBHOOK_URL, {
+                        method: 'POST',
+                        mode: 'no-cors',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(lead)
+                    });
+                }
+            } catch (err) {
+                console.error('Lead storage error:', err);
+            }
+        }
+
+        // Admin helper to export saved leads
+        window.exportSUHLeads = function() {
+            const leads = JSON.parse(localStorage.getItem('suh_leads') || '[]');
+            if (leads.length === 0) {
+                alert('Belum ada data leads tersimpan.');
+                return;
+            }
+            console.table(leads);
+            alert(`Terdapat ${leads.length} prospek leads tersimpan di browser. Data lengkap sudah ditampilkan pada Developer Console (F12).`);
+        };
+
+        // 1-Click Share to Partner (Suami/Istri/Keluarga)
+        function shareWithPartner() {
+            const text = `Hai sayang/keluarga, coba lihat rekomendasi perumahan ini: *Sawangan Urban Homes* di Jl. H. Jawi, Sawangan Depok.
+- Rumah 2 Lantai Siap Huni mulai 400 Jt-an (Cicilan Rp 2,8 Jt/bln)
+- Kavling SHM 66m² cuma 280 Jt (Free Pajak BPHTB & Balik Nama)
+- High Ceiling Sejuk, One Gate System, Bebas Banjir, & 15 menit ke Tol Desari!
+
+Coba cek detail denah, video tour, dan kalkulator KPR-nya di sini ya:
+https://sawanganurbanhomes.vercel.app`;
+            window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
+        }
+
+        // Rent vs Buy Calculator
+        let rentYears = 5;
+        function calculateRentVsBuy() {
+            const slider = document.getElementById('sliderRent');
+            const displayRent = document.getElementById('displayRentVal');
+            const calcLoss = document.getElementById('calcRentLoss');
+            const calcGain = document.getElementById('calcAssetGain');
+            if (!slider || !displayRent || !calcLoss || !calcGain) return;
+
+            const monthlyRent = parseInt(slider.value, 10);
+            displayRent.textContent = formatRupiah(monthlyRent) + ' / bln';
+
+            const totalLoss = monthlyRent * 12 * rentYears;
+            calcLoss.textContent = formatRupiah(totalLoss);
+
+            const baseAsset = 450000000;
+            const projectedAsset = Math.round(baseAsset * Math.pow(1.08, rentYears));
+            calcGain.textContent = formatRupiah(projectedAsset) + '+';
+        }
+
+        function setRentYears(years, btn) {
+            rentYears = years;
+            const displayYears = document.getElementById('displayYearsVal');
+            if (displayYears) displayYears.textContent = years + ' Tahun';
+
+            const parent = btn.parentElement;
+            parent.querySelectorAll('.rent-year-btn').forEach(b => {
+                b.className = "rent-year-btn py-2.5 rounded-xl border border-slate-200 text-slate-700 font-bold text-xs sm:text-sm hover:border-brand-500 transition";
+            });
+            btn.className = "rent-year-btn py-2.5 rounded-xl border-2 border-brand-900 bg-brand-900 text-white font-extrabold text-xs sm:text-sm shadow-sm transition";
+
+            calculateRentVsBuy();
+        }
+
         // 1. Interactive Before-After Slider Implementation
         function initBeforeAfterSlider(containerId) {
             const container = document.getElementById(containerId);
@@ -2904,10 +3126,20 @@
             const payment = document.querySelector('input[name="paymentScheme"]:checked')?.value || 'KPR Syariah';
             const name = document.getElementById('modalCustomerName').value.trim();
 
+            saveLeadData({
+                type: 'Booking Survey Lokasi',
+                name: name,
+                product: product,
+                payment: payment,
+                day: selectedSurveyDay,
+                time: selectedSurveyTime,
+                coupon: 'SUH-VIP2026'
+            });
+
             const text = `Halo Admin Sawangan Urban Homes, saya ${name}.\nSaya ingin survey lokasi dan konsultasi:\n- Unit: ${product}\n- Rencana Bayar: ${payment}\n- Hari Survey: ${selectedSurveyDay}\n- Sesi Jam: ${selectedSurveyTime}\n- Kode Kupon VIP: SUH-VIP2026\n\nApakah promo Free Pajak & Notaris masih berlaku? Boleh minta shareloc Google Maps titik Jl. H. Jawi?`;
 
             closeSurveyModal();
-            window.open(`https://wa.me/6281911590700?text=${encodeURIComponent(text)}`, '_blank');
+            routeWhatsApp(text);
         }
 
         function openLightbox(src, caption) {
@@ -3058,7 +3290,10 @@
 
             const schemeName = currentScheme === 'syariah' ? 'KPR Syariah (Flat Murabahah)' : 'KPR Konvensional Promo';
             const waMessage = `Halo Admin Sawangan Urban Homes, saya hitung di website simulasi properti seharga ${formatRupiah(harga)} dengan DP ${dpPercent}% tenor ${currentTenor} tahun skema ${schemeName} estimasi cicilan ${formatRupiah(monthlyInstallment)}/bln. Boleh minta detail bank dan brosur resminya?`;
-            btnKirimKPR.href = `https://wa.me/6281911590700?text=${encodeURIComponent(waMessage)}`;
+            btnKirimKPR.onclick = function(e) {
+                e.preventDefault();
+                routeWhatsApp(waMessage);
+            };
         }
 
         function setTenor(years) {
@@ -3235,8 +3470,15 @@
             const incStr = incomeLabels[kprScreeningState.income] || kprScreeningState.income;
             const slikStr = slikLabels[kprScreeningState.slik] || kprScreeningState.slik;
 
+            saveLeadData({
+                type: 'Screening Kelayakan KPR',
+                job: jobStr,
+                income: incStr,
+                slik: slikStr
+            });
+
             const msg = `Halo Tim KPR Sawangan Urban Homes, saya sudah cek kelayakan awal di website:\n- Status: ${jobStr}\n- Penghasilan: ${incStr}\n- SLIK OJK: ${slikStr}\n\nMohon bantu konsultasi peluang KPR & rekomendasi bank partner terbaik (BSI / BTN / Mandiri). Terima kasih!`;
-            window.open(`https://wa.me/6281911590700?text=${encodeURIComponent(msg)}`, '_blank');
+            routeWhatsApp(msg);
         }
 
         // 9. Commute Time Estimator Logic
@@ -3300,15 +3542,22 @@
             const wa = document.getElementById('brochureWa').value.trim();
             const unit = document.getElementById('brochureUnit').value;
 
+            saveLeadData({
+                type: 'Download E-Brosur & Pricelist',
+                name: name,
+                phone: wa,
+                unit: unit
+            });
+
             const msg = `Halo Admin Sawangan Urban Homes, perkenalkan saya ${name} (${wa}). Saya ingin mengunduh E-Brosur Resmi 2026 dan Pricelist untuk unit: ${unit}. Boleh mohon dikirimkan dokumen PDF-nya? Terima kasih!`;
             
-            // Open WA
-            window.open(`https://wa.me/6281911590700?text=${encodeURIComponent(msg)}`, '_blank');
+            // Open WA with Round-Robin & UTM Attribution
+            routeWhatsApp(msg);
 
             // Open Preview / Brochure image
             window.open('assets/images/brochure-kavling-siteplan.jpg', '_blank');
 
-            alert('Terima kasih ' + name + '! E-Brosur terbuka di tab baru dan permohonan pricelist resmi telah diteruskan ke WhatsApp Anda.');
+            alert('Terima kasih ' + name + '! E-Brosur terbuka di tab baru dan permohonan pricelist resmi telah diteruskan ke WhatsApp tim marketing.');
         }
 
         // Run initializers
