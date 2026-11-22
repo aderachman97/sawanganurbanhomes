@@ -215,47 +215,72 @@
 
     <!-- Navigation Header -->
     <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm transition-all">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <div class="flex items-center gap-3">
-                <div
-                    class="w-10 h-10 rounded-xl bg-brand-900 text-brand-500 flex items-center justify-center font-bold text-xl shadow-md border border-brand-500/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+            
+            <!-- Brand Logo -->
+            <a href="#" class="shrink-0 flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-brand-900 text-brand-500 flex items-center justify-center font-bold text-xl shadow-md border border-brand-500/30 group-hover:scale-105 transition-transform">
                     <i data-lucide="home" class="w-5 h-5 text-brand-500"></i>
                 </div>
                 <div>
-                    <span
-                        class="text-xl font-extrabold tracking-tight text-brand-900 block leading-tight">SAWANGAN</span>
-                    <span class="text-[11px] font-bold text-brand-500 tracking-[0.25em] uppercase block">URBAN
-                        HOMES</span>
+                    <span class="text-xl font-extrabold tracking-tight text-brand-900 block leading-tight">SAWANGAN</span>
+                    <span class="text-[11px] font-bold text-brand-500 tracking-[0.25em] uppercase block">URBAN HOMES</span>
                 </div>
-            </div>
+            </a>
 
-            <!-- Desktop Nav -->
-            <nav class="hidden lg:flex items-center gap-5 xl:gap-6 text-xs xl:text-sm font-semibold text-slate-600">
-                <a href="#pilihan-unit" class="hover:text-brand-600 transition">Pilihan Unit</a>
-                <a href="#transparansi-biaya" class="hover:text-brand-600 transition">Biaya All-In</a>
-                <a href="#spesifikasi" class="hover:text-brand-600 transition">Spesifikasi</a>
-                <a href="#denah" class="hover:text-brand-600 transition">Denah</a>
-                <a href="#site-plan" class="hover:text-brand-600 transition">Site Plan</a>
-                <a href="#simulasi-kpr" class="hover:text-brand-600 transition">Simulasi KPR</a>
-                <a href="#cek-kpr" class="hover:text-emerald-700 font-bold transition text-emerald-600">Cek Lolos KPR</a>
-                <a href="#lokasi" class="hover:text-brand-600 transition">Lokasi & Akses</a>
-                <a href="#download-brosur" class="hover:text-amber-600 font-bold transition text-amber-600">E-Brosur</a>
+            <!-- Streamlined Desktop Navigation (Clean & Aesthetic) -->
+            <nav class="hidden md:flex items-center gap-6 lg:gap-8 text-xs sm:text-sm font-semibold text-slate-600 whitespace-nowrap">
+                <a href="#pilihan-unit" class="text-slate-700 hover:text-amber-600 font-semibold transition py-1 relative hover:after:w-full after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-amber-500 after:transition-all">Pilihan Unit</a>
+                <a href="#transparansi-biaya" class="text-slate-700 hover:text-amber-600 font-semibold transition py-1 relative hover:after:w-full after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-amber-500 after:transition-all">Biaya All-In</a>
+                <a href="#denah" class="text-slate-700 hover:text-amber-600 font-semibold transition py-1 relative hover:after:w-full after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-amber-500 after:transition-all">Denah &amp; Spek</a>
+                <a href="#simulasi-kpr" class="text-slate-700 hover:text-amber-600 font-semibold transition py-1 relative hover:after:w-full after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-amber-500 after:transition-all">Simulasi KPR</a>
+                <a href="#lokasi" class="text-slate-700 hover:text-amber-600 font-semibold transition py-1 relative hover:after:w-full after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-amber-500 after:transition-all">Lokasi</a>
+                
+                <!-- Highlight E-Brosur Pill -->
+                <a href="#download-brosur" class="inline-flex items-center gap-1.5 text-xs font-bold text-amber-800 bg-amber-50 hover:bg-amber-100 border border-amber-300/80 px-3 py-1.5 rounded-full transition shadow-xs">
+                    <i data-lucide="file-down" class="w-3.5 h-3.5 text-amber-600"></i>
+                    <span>E-Brosur</span>
+                </a>
             </nav>
 
-            <!-- Header Action -->
-            <div class="flex items-center gap-3">
+            <!-- Header Action Buttons -->
+            <div class="shrink-0 flex items-center gap-2.5 sm:gap-3">
                 <button onclick="openSurveyModal()"
-                    class="hidden sm:inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-brand-900 text-xs sm:text-sm font-extrabold px-4 py-2.5 rounded-xl shadow-sm hover:shadow-md transition">
+                    class="hidden sm:inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-amber-400 hover:from-amber-400 hover:to-amber-300 text-brand-900 text-xs sm:text-sm font-black px-4 py-2.5 rounded-xl shadow-sm hover:shadow-md transition">
                     <i data-lucide="sparkles" class="w-4 h-4 text-brand-900"></i>
                     <span>Klaim Promo KPR</span>
                 </button>
                 <a href="https://wa.me/6281911590700?text=Halo%20Admin%20Sawangan%20Urban%20Homes,%20saya%20tertarik%20tanya%20info%20unit%20dan%20jadwal%20survey%20lokasi."
                     target="_blank"
-                    class="inline-flex items-center gap-2 bg-brand-900 hover:bg-brand-800 text-white text-xs sm:text-sm font-bold px-4 sm:px-5 py-2.5 rounded-xl shadow-sm hover:shadow-md transition">
+                    class="inline-flex items-center gap-2 bg-brand-900 hover:bg-brand-800 text-white text-xs sm:text-sm font-bold px-3.5 sm:px-4 py-2.5 rounded-xl shadow-sm hover:shadow-md transition">
                     <i data-lucide="phone-call" class="w-4 h-4 text-brand-500"></i>
-                    <span class="hidden sm:inline">0819 1159 0700</span>
-                    <span class="sm:hidden">Hubungi</span>
+                    <span class="hidden xl:inline">0819 1159 0700</span>
+                    <span class="xl:hidden text-xs">CS WA</span>
                 </a>
+
+                <!-- Mobile Hamburger Toggle Button -->
+                <button type="button" onclick="toggleMobileMenu()" class="md:hidden p-2 text-slate-700 hover:text-brand-900 hover:bg-slate-100 rounded-xl transition">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Navigation Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white/95 backdrop-blur-md border-b border-slate-200 px-6 py-5 space-y-3 shadow-xl">
+            <a href="#pilihan-unit" onclick="toggleMobileMenu()" class="block text-sm font-bold text-slate-800 hover:text-amber-600 py-1">Pilihan Unit</a>
+            <a href="#transparansi-biaya" onclick="toggleMobileMenu()" class="block text-sm font-bold text-slate-800 hover:text-amber-600 py-1">Transparansi Biaya All-In</a>
+            <a href="#denah" onclick="toggleMobileMenu()" class="block text-sm font-bold text-slate-800 hover:text-amber-600 py-1">Denah Ruang</a>
+            <a href="#spesifikasi" onclick="toggleMobileMenu()" class="block text-sm font-bold text-slate-800 hover:text-amber-600 py-1">Spesifikasi Material</a>
+            <a href="#site-plan" onclick="toggleMobileMenu()" class="block text-sm font-bold text-slate-800 hover:text-amber-600 py-1">Site Plan 13 Unit</a>
+            <a href="#simulasi-kpr" onclick="toggleMobileMenu()" class="block text-sm font-bold text-slate-800 hover:text-amber-600 py-1">Simulasi KPR Syariah &amp; Konven</a>
+            <a href="#cek-kpr" onclick="toggleMobileMenu()" class="block text-sm font-bold text-emerald-700 hover:text-emerald-800 py-1">Cek Peluang Lolos KPR (1 Menit)</a>
+            <a href="#lokasi" onclick="toggleMobileMenu()" class="block text-sm font-bold text-slate-800 hover:text-amber-600 py-1">Lokasi &amp; Waktu Tempuh</a>
+            <a href="#download-brosur" onclick="toggleMobileMenu()" class="block text-sm font-bold text-amber-700 hover:text-amber-800 py-1">Download E-Brosur (PDF)</a>
+            <div class="pt-2">
+                <button onclick="toggleMobileMenu(); openSurveyModal()" class="w-full inline-flex items-center justify-center gap-2 bg-amber-500 text-brand-900 font-extrabold py-3 px-4 rounded-xl text-xs shadow-md">
+                    <i data-lucide="sparkles" class="w-4 h-4"></i>
+                    <span>Klaim Promo KPR &amp; Survey</span>
+                </button>
             </div>
         </div>
     </header>
@@ -3409,6 +3434,13 @@
 
             sections.forEach(sec => revealObserver.observe(sec));
         });
+
+        // 13. Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            if (!menu) return;
+            menu.classList.toggle('hidden');
+        }
 
         inputHarga.addEventListener('input', calculateKPR);
         inputDP.addEventListener('input', calculateKPR);
