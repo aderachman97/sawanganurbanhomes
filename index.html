@@ -147,15 +147,29 @@
             pointer-events: auto !important;
         }
 
-        /* Cinematic Ken Burns Motion (Ultra-smooth 0KB overhead) */
+        /* Cinematic Ken Burns Motion (Ultra-smooth 0KB overhead, Hardware-Accelerated) */
         @keyframes kenburns {
-            0% { transform: scale(1.0) translate(0, 0); }
-            50% { transform: scale(1.06) translate(-1%, -0.5%); }
-            100% { transform: scale(1.0) translate(0, 0); }
+            0% { transform: scale(1.0) translate3d(0, 0, 0); }
+            50% { transform: scale(1.14) translate3d(-2.5%, -1.5%, 0); }
+            100% { transform: scale(1.0) translate3d(0, 0, 0); }
         }
         .animate-kenburns {
-            animation: kenburns 24s ease-in-out infinite;
+            animation: kenburns 14s ease-in-out infinite alternate;
             will-change: transform;
+            transform-origin: center center;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+
+        @media (max-width: 640px) {
+            @keyframes kenburns-mobile {
+                0% { transform: scale(1.02) translate3d(0, 0, 0); }
+                50% { transform: scale(1.16) translate3d(-3%, -2%, 0); }
+                100% { transform: scale(1.02) translate3d(0, 0, 0); }
+            }
+            .animate-kenburns {
+                animation: kenburns-mobile 10s ease-in-out infinite alternate !important;
+            }
         }
 
         /* Cinematic Spotlight & Glow */
@@ -317,6 +331,29 @@
                             class="text-white font-semibold">High Ceiling sejuk</span>, sisa tanah belakang luas, dan
                         lingkungan aman bebas banjir hanya 15 menit ke Gerbang Tol Desari.
                     </p>
+
+                    <!-- Mobile Quick-Launch Cinematic Tour Banner (Hero Mobile Optimization) -->
+                    <div class="block lg:hidden pt-1">
+                        <button type="button" onclick="openCinematicTour()"
+                            class="w-full flex items-center justify-between gap-3 bg-gradient-to-r from-brand-900/90 via-slate-900/95 to-brand-950 border border-amber-400/60 p-3 rounded-2xl shadow-xl active:scale-95 transition group">
+                            <div class="flex items-center gap-3">
+                                <div class="relative w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0 border border-amber-400/40">
+                                    <span class="absolute -top-1 -right-1 w-2.5 h-2.5 rounded-full bg-rose-500 animate-ping"></span>
+                                    <i data-lucide="play" class="w-5 h-5 fill-current text-amber-400 translate-x-0.5"></i>
+                                </div>
+                                <div class="text-left">
+                                    <div class="flex items-center gap-1.5">
+                                        <span class="text-[10px] font-extrabold uppercase tracking-wider text-amber-400 font-mono">CINEMATIC 4K TOUR</span>
+                                        <span class="text-[9px] bg-rose-500/80 text-white font-bold px-1.5 py-0.2 rounded-full">60 DETIK</span>
+                                    </div>
+                                    <p class="text-xs font-bold text-white leading-tight">Putar Suasana Realita Cluster &amp; Hunian</p>
+                                </div>
+                            </div>
+                            <span class="text-xs font-bold text-amber-300 flex items-center gap-1 group-hover:translate-x-1 transition shrink-0 pr-1">
+                                Putar <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                            </span>
+                        </button>
+                    </div>
 
                     <!-- Price Highlight Chips -->
                     <div class="grid grid-cols-2 gap-3 sm:gap-4 max-w-lg mx-auto lg:mx-0 pt-2">
@@ -2709,26 +2746,26 @@
         </div>
     </div>
 
-    <!-- MODAL: CINEMATIC WALKTHROUGH TOUR (Smart Cinematic 60-Detik Reel) -->
+    <!-- MODAL: CINEMATIC WALKTHROUGH TOUR (Smart Cinematic 60-Detik Reel - Mobile & Desktop Optimized) -->
     <div id="cinematicTourModal"
-        class="fixed inset-0 z-50 bg-slate-950/95 backdrop-blur-xl flex items-center justify-center p-3 sm:p-6 opacity-0 invisible pointer-events-none transition-all duration-500"
+        class="fixed inset-0 z-50 bg-slate-950/95 backdrop-blur-xl flex items-center justify-center p-2.5 sm:p-6 opacity-0 invisible pointer-events-none transition-all duration-500"
         onclick="closeCinematicTour()">
-        <div class="relative max-w-4xl w-full bg-slate-900 border border-amber-400/30 rounded-3xl overflow-hidden shadow-2xl transform transition-transform duration-500 scale-95"
+        <div class="relative max-w-4xl w-full bg-slate-900 border border-amber-400/30 rounded-3xl overflow-hidden shadow-2xl transform transition-transform duration-500 scale-95 flex flex-col max-h-[94vh]"
             id="cinematicCard" onclick="event.stopPropagation()">
             
             <!-- Top Cinematic Header Bar -->
-            <div class="p-4 sm:p-5 bg-slate-950/90 border-b border-white/10 flex items-center justify-between">
-                <div class="flex items-center gap-3">
-                    <div class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold">
+            <div class="p-3.5 sm:p-5 bg-slate-950/90 border-b border-white/10 flex items-center justify-between shrink-0">
+                <div class="flex items-center gap-2.5 sm:gap-3">
+                    <div class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold shrink-0">
                         <i data-lucide="clapperboard" class="w-4 h-4 text-amber-400"></i>
                     </div>
                     <div>
                         <span class="text-[10px] font-mono uppercase tracking-widest text-amber-400 font-bold block">VIRTUAL CINEMATIC REEL</span>
-                        <h4 class="text-sm sm:text-base font-extrabold text-white" id="cinemaSceneTitle">Suasana Cluster &amp; One Gate System (Jl. H. Jawi)</h4>
+                        <h4 class="text-xs sm:text-base font-extrabold text-white leading-tight" id="cinemaSceneTitle">Suasana Cluster &amp; One Gate System (Jl. H. Jawi)</h4>
                     </div>
                 </div>
 
-                <div class="flex items-center gap-3">
+                <div class="flex items-center gap-2 sm:gap-3 shrink-0">
                     <span class="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/10 text-slate-300 text-xs font-mono">
                         <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
                         <span>4K Ultra Res</span>
@@ -2739,27 +2776,27 @@
                 </div>
             </div>
 
-            <!-- Cinema Screen / Player Widescreen 16:9 Container -->
-            <div class="relative aspect-video bg-black overflow-hidden group">
+            <!-- Cinema Screen / Player Widescreen Container -->
+            <div class="relative aspect-[16/10] sm:aspect-video bg-black overflow-hidden group shrink-0">
                 <img id="cinemaFrameImg" src="assets/images/facade-family-cars.jpg" alt="Cinematic Walkthrough Scene"
                     class="w-full h-full object-cover animate-kenburns transition-opacity duration-500">
                 
                 <!-- Cinema Letterbox Vignette Overlay -->
-                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-slate-950/40 pointer-events-none"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-transparent to-slate-950/40 pointer-events-none"></div>
 
                 <!-- Scene Caption Overlay -->
-                <div class="absolute bottom-4 left-4 right-4 z-10 flex flex-col sm:flex-row items-start sm:items-end justify-between gap-3 pointer-events-none">
-                    <div class="bg-slate-950/80 backdrop-blur-md px-4 py-2.5 rounded-xl border border-white/15 max-w-lg">
-                        <span class="text-[10px] text-amber-400 font-bold uppercase tracking-wider block" id="cinemaSceneTag">SCENE 1 / 4 • EKSTERIOR</span>
-                        <p class="text-xs sm:text-sm text-white font-semibold" id="cinemaSceneDesc">
+                <div class="absolute bottom-2.5 sm:bottom-4 left-2.5 sm:left-4 right-2.5 sm:right-4 z-10 flex flex-col sm:flex-row items-start sm:items-end justify-between gap-2.5 sm:gap-3 pointer-events-none">
+                    <div class="bg-slate-950/85 backdrop-blur-md px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl border border-white/15 max-w-lg">
+                        <span class="text-[9px] sm:text-[10px] text-amber-400 font-bold uppercase tracking-wider block" id="cinemaSceneTag">SCENE 1 / 4 • EKSTERIOR</span>
+                        <p class="text-[11px] sm:text-sm text-white font-semibold leading-snug" id="cinemaSceneDesc">
                             Jalan paving cluster lega muat 2 mobil berpapasan, pagar keliling one-gate aman untuk anak bermain bola &amp; sepeda.
                         </p>
                     </div>
-                    <div class="flex items-center gap-2 pointer-events-auto">
-                        <button onclick="prevCinemaScene()" class="w-9 h-9 rounded-xl bg-slate-900/80 hover:bg-slate-800 text-white flex items-center justify-center border border-white/20 transition">
+                    <div class="flex items-center gap-2 pointer-events-auto shrink-0 self-end">
+                        <button onclick="prevCinemaScene()" class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-slate-900/80 hover:bg-slate-800 text-white flex items-center justify-center border border-white/20 transition active:scale-95">
                             <i data-lucide="chevron-left" class="w-4 h-4"></i>
                         </button>
-                        <button onclick="nextCinemaScene()" class="w-9 h-9 rounded-xl bg-amber-500 hover:bg-amber-400 text-brand-900 font-black flex items-center justify-center shadow-lg transition">
+                        <button onclick="nextCinemaScene()" class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-amber-500 hover:bg-amber-400 text-brand-900 font-black flex items-center justify-center shadow-lg transition active:scale-95">
                             <i data-lucide="chevron-right" class="w-4 h-4"></i>
                         </button>
                     </div>
@@ -2767,22 +2804,22 @@
             </div>
 
             <!-- Bottom Scene Selector Thumbnails -->
-            <div class="p-4 sm:p-5 bg-slate-950/95 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="p-3 sm:p-5 bg-slate-950/95 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 shrink-0 overflow-y-auto">
                 <!-- Scene Nav Thumbnails -->
-                <div class="grid grid-cols-4 gap-2 w-full sm:w-auto overflow-x-auto">
-                    <button type="button" onclick="setCinemaScene(0)" class="cinema-thumb-btn border-2 border-amber-400 rounded-xl overflow-hidden aspect-video relative group/th shrink-0 w-16 sm:w-20 transition">
+                <div class="grid grid-cols-4 gap-2 w-full sm:w-auto">
+                    <button type="button" onclick="setCinemaScene(0)" class="cinema-thumb-btn border-2 border-amber-400 rounded-xl overflow-hidden aspect-video relative group/th shrink-0 transition">
                         <img src="assets/images/facade-family-cars.jpg" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-black/30 group-hover/th:bg-transparent"></div>
                     </button>
-                    <button type="button" onclick="setCinemaScene(1)" class="cinema-thumb-btn border-2 border-white/20 hover:border-white/50 rounded-xl overflow-hidden aspect-video relative group/th shrink-0 w-16 sm:w-20 transition">
+                    <button type="button" onclick="setCinemaScene(1)" class="cinema-thumb-btn border-2 border-white/20 hover:border-white/50 rounded-xl overflow-hidden aspect-video relative group/th shrink-0 transition">
                         <img src="assets/images/interior-staged-dining.jpg" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-black/30 group-hover/th:bg-transparent"></div>
                     </button>
-                    <button type="button" onclick="setCinemaScene(2)" class="cinema-thumb-btn border-2 border-white/20 hover:border-white/50 rounded-xl overflow-hidden aspect-video relative group/th shrink-0 w-16 sm:w-20 transition">
+                    <button type="button" onclick="setCinemaScene(2)" class="cinema-thumb-btn border-2 border-white/20 hover:border-white/50 rounded-xl overflow-hidden aspect-video relative group/th shrink-0 transition">
                         <img src="assets/images/backyard-staged-garden.jpg" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-black/30 group-hover/th:bg-transparent"></div>
                     </button>
-                    <button type="button" onclick="setCinemaScene(3)" class="cinema-thumb-btn border-2 border-white/20 hover:border-white/50 rounded-xl overflow-hidden aspect-video relative group/th shrink-0 w-16 sm:w-20 transition">
+                    <button type="button" onclick="setCinemaScene(3)" class="cinema-thumb-btn border-2 border-white/20 hover:border-white/50 rounded-xl overflow-hidden aspect-video relative group/th shrink-0 transition">
                         <img src="assets/images/interior-staged-bedroom.jpg" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-black/30 group-hover/th:bg-transparent"></div>
                     </button>
@@ -2791,7 +2828,7 @@
                 <!-- Action CTA -->
                 <div class="flex items-center gap-3 w-full sm:w-auto">
                     <button onclick="closeCinematicTour(); openSurveyModal('Survey Setelah Nonton Virtual Tour')" 
-                        class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-emerald-500 to-wa-500 hover:from-emerald-600 hover:to-wa-600 text-white text-xs sm:text-sm font-extrabold px-5 py-2.5 rounded-xl shadow-lg transition">
+                        class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-emerald-500 to-wa-500 hover:from-emerald-600 hover:to-wa-600 text-white text-xs sm:text-sm font-extrabold px-4 sm:px-5 py-2.5 rounded-xl shadow-lg transition active:scale-95">
                         <i data-lucide="calendar" class="w-4 h-4"></i>
                         <span>Jadwalkan Survey Lokasi Asli</span>
                     </button>
@@ -3634,15 +3671,18 @@ https://sawanganurbanhomes.vercel.app`;
 
             if (!imgEl) return;
 
-            // Soft transition
+            // Soft transition & restart Ken Burns motion
             imgEl.style.opacity = '0.3';
             setTimeout(() => {
                 imgEl.src = scene.img;
+                imgEl.classList.remove('animate-kenburns');
+                void imgEl.offsetWidth; // Force CSS reflow to restart animation from beginning
+                imgEl.classList.add('animate-kenburns');
                 imgEl.style.opacity = '1';
                 if (titleEl) titleEl.textContent = scene.title;
                 if (tagEl) tagEl.textContent = scene.tag;
                 if (descEl) descEl.textContent = scene.desc;
-            }, 200);
+            }, 180);
 
             thumbBtns.forEach((btn, i) => {
                 if (i === currentSceneIndex) {
