@@ -1,0 +1,2277 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sawangan Urban Homes | Rumah 2 Lantai & Kavling SHM di Sawangan Depok</title>
+    <meta name="description" content="Sawangan Urban Homes - Hunian modern 1 & 2 lantai mulai 400 Jutaan & Kavling SHM 66m² cuma 280 Juta. One gate system, high ceiling, bebas banjir, 15 menit ke Tol Desari.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#fbf8f1',
+                            100: '#f5efde',
+                            200: '#ebdebc',
+                            500: '#c59a3f', // Gold elegant accent from logo
+                            600: '#a87e2b',
+                            700: '#86611e',
+                            800: '#1b3248', // Deep modern navy
+                            900: '#0f2030',
+                        },
+                        wa: {
+                            500: '#25D366',
+                            600: '#128C7E',
+                            700: '#075E54',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+            max-width: 100vw;
+        }
+        .badge-glow {
+            box-shadow: 0 0 20px rgba(197, 154, 63, 0.35);
+        }
+        /* Before-After Slider Container */
+        .ba-slider {
+            position: relative;
+            overflow: hidden;
+            user-select: none;
+            touch-action: pan-y;
+            border-radius: 1.25rem;
+        }
+        .ba-slider img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            pointer-events: none;
+        }
+        .ba-slider .resize {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 50%;
+            overflow: hidden;
+        }
+        .ba-slider .handle {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: #ffffff;
+            cursor: ew-resize;
+            transform: translateX(-50%);
+            box-shadow: 0 0 12px rgba(0,0,0,0.6);
+            z-index: 10;
+        }
+        .ba-slider .handle-circle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: #ffffff;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #0f2030;
+            font-weight: bold;
+        }
+        /* Modal Transition */
+        .modal-active {
+            opacity: 1 !important;
+            visibility: visible !important;
+            pointer-events: auto !important;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-slate-800 bg-slate-50 selection:bg-brand-500 selection:text-white pb-20 md:pb-0">
+
+    <!-- Top Announcement Bar with Live Countdown Timer -->
+    <div class="bg-gradient-to-r from-amber-600 via-brand-500 to-amber-600 text-white text-xs md:text-sm font-semibold py-2.5 px-4 text-center tracking-wide flex flex-wrap items-center justify-center gap-2 shadow-sm">
+        <span class="inline-block px-2 py-0.5 bg-white/20 rounded-full text-[11px] uppercase tracking-wider font-extrabold">Promo Terbatas</span>
+        <span>Free Biaya Pajak & Balik Nama Notaris + Subsidi DP KPR!</span>
+        <div class="inline-flex items-center gap-1 bg-brand-900/40 px-2.5 py-0.5 rounded-lg text-amber-200 font-mono text-[11px] sm:text-xs">
+            <i data-lucide="clock" class="w-3.5 h-3.5 inline"></i>
+            <span id="countdownTimer">02 Hari : 14 Jam : 32 Mnt : 10 Dtk</span>
+        </div>
+        <a href="#promo" class="underline ml-1 hover:text-white/80 hidden sm:inline">Klaim Promo →</a>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-brand-900 text-brand-500 flex items-center justify-center font-bold text-xl shadow-md border border-brand-500/30">
+                    <i data-lucide="home" class="w-5 h-5 text-brand-500"></i>
+                </div>
+                <div>
+                    <span class="text-xl font-extrabold tracking-tight text-brand-900 block leading-tight">SAWANGAN</span>
+                    <span class="text-[11px] font-bold text-brand-500 tracking-[0.25em] uppercase block">URBAN HOMES</span>
+                </div>
+            </div>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-7 text-sm font-semibold text-slate-600">
+                <a href="#solusi" class="hover:text-brand-600 transition">Keunggulan</a>
+                <a href="#pilihan-unit" class="hover:text-brand-600 transition">Pilihan Unit</a>
+                <a href="#denah" class="hover:text-brand-600 transition">Denah Ruang</a>
+                <a href="#sebelum-sesudah" class="hover:text-brand-600 transition">Before/After</a>
+                <a href="#site-plan" class="hover:text-brand-600 transition">Site Plan</a>
+                <a href="#simulasi-kpr" class="hover:text-brand-600 transition">Simulasi KPR</a>
+                <a href="#lokasi" class="hover:text-brand-600 transition">Lokasi</a>
+            </nav>
+
+            <!-- Header Action -->
+            <div class="flex items-center gap-3">
+                <button onclick="openSurveyModal()" 
+                        class="hidden sm:inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-brand-900 text-xs sm:text-sm font-extrabold px-4 py-2.5 rounded-xl shadow-sm hover:shadow-md transition">
+                    <i data-lucide="sparkles" class="w-4 h-4 text-brand-900"></i>
+                    <span>Klaim Promo KPR</span>
+                </button>
+                <a href="https://wa.me/6281911590700?text=Halo%20Admin%20Sawangan%20Urban%20Homes,%20saya%20tertarik%20tanya%20info%20unit%20dan%20jadwal%20survey%20lokasi." 
+                   target="_blank"
+                   class="inline-flex items-center gap-2 bg-brand-900 hover:bg-brand-800 text-white text-xs sm:text-sm font-bold px-4 sm:px-5 py-2.5 rounded-xl shadow-sm hover:shadow-md transition">
+                    <i data-lucide="phone-call" class="w-4 h-4 text-brand-500"></i>
+                    <span class="hidden sm:inline">0819 1159 0700</span>
+                    <span class="sm:hidden">Hubungi</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION (Anti-Slop, High-Intent Conversion) -->
+    <section class="relative bg-gradient-to-b from-brand-900 via-brand-900 to-slate-900 text-white pt-10 pb-20 lg:pt-16 lg:pb-28 overflow-hidden">
+        <!-- Background Lighting Glows -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-96 bg-brand-500/10 blur-[120px] rounded-full pointer-events-none"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Column: Copywriting & CTA -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/15 text-amber-300 text-xs sm:text-sm font-semibold tracking-wide">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                        Cluster Eksklusif One Gate System — Sawangan Depok
+                    </div>
+
+                    <h1 class="text-3xl sm:text-5xl lg:text-[46px] font-extrabold tracking-tight leading-[1.15] text-white">
+                        Daripada Bayar Sewa Seumur Hidup, Miliki <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-brand-500 to-amber-300">Rumah Nyata & Kavling SHM</span> Mulai 280 Juta.
+                    </h1>
+
+                    <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
+                        Bukan jualan gambar 3D kosong. Nikmati hunian berdesain <span class="text-white font-semibold">High Ceiling sejuk</span>, sisa tanah belakang luas, dan lingkungan aman bebas banjir hanya 15 menit ke Gerbang Tol Desari.
+                    </p>
+
+                    <!-- Price Highlight Chips -->
+                    <div class="grid grid-cols-2 gap-3 sm:gap-4 max-w-lg mx-auto lg:mx-0 pt-2">
+                        <div class="bg-white/10 border border-white/15 backdrop-blur-md rounded-2xl p-4 text-left">
+                            <span class="text-xs text-slate-300 uppercase tracking-wider font-semibold block">Rumah 1 & 2 Lantai</span>
+                            <span class="text-xl sm:text-2xl font-black text-amber-300">Mulai 400 Jt-an</span>
+                            <span class="text-[11px] text-slate-400 block mt-0.5">Est. Cicilan Rp 2,8 Jt/bln</span>
+                        </div>
+                        <div class="bg-white/10 border border-white/15 backdrop-blur-md rounded-2xl p-4 text-left">
+                            <span class="text-xs text-slate-300 uppercase tracking-wider font-semibold block">Kavling SHM 66 m²</span>
+                            <span class="text-xl sm:text-2xl font-black text-amber-300">Hanya 280 Juta</span>
+                            <span class="text-[11px] text-emerald-300 block mt-0.5">Free Pajak & Balik Nama*</span>
+                        </div>
+                    </div>
+
+                    <!-- Direct Dual CTAs + Micro Quiz -->
+                    <div class="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center justify-center lg:justify-start gap-4">
+                        <button onclick="openSurveyModal()" 
+                                class="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-emerald-500 to-wa-500 hover:from-emerald-600 hover:to-wa-600 text-white font-extrabold px-7 py-4 rounded-xl shadow-lg shadow-emerald-500/25 hover:shadow-emerald-500/40 transform hover:-translate-y-0.5 transition text-base">
+                            <i data-lucide="calendar-check" class="w-5 h-5"></i>
+                            <span>Pilih Unit & Jadwalkan Survey</span>
+                        </button>
+
+                        <a href="#sebelum-sesudah" 
+                           class="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold px-6 py-4 rounded-xl backdrop-blur-md transition text-base">
+                            <i data-lucide="sliders-horizontal" class="w-5 h-5 text-amber-400"></i>
+                            <span>Lihat Before/After Unit</span>
+                        </a>
+                    </div>
+
+                    <!-- Trust Points -->
+                    <div class="pt-4 grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs text-slate-300 border-t border-white/10 text-left">
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+                            <span>SHM Pecah Perkavling</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="file-check-2" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+                            <span>PBG / IMB Siap</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="waves" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+                            <span>100% Bebas Banjir</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="key-round" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+                            <span>One Gate System 24H</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Real Social Proof Visual -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white/10 group cursor-pointer" onclick="openLightbox('assets/images/facade-family-cars.jpg', 'Fasad Realita Unit 2 Lantai Sawangan Urban Homes dengan Keluarga & Double Carport')">
+                        <img src="assets/images/facade-family-cars.jpg" 
+                             alt="Rumah Realita 2 Lantai Sawangan Urban Homes dengan Keluarga dan Mobil Terparkir" 
+                             class="w-full h-auto object-cover transform group-hover:scale-105 transition duration-700 ease-out">
+                        
+                        <!-- Floating Glass Badge -->
+                        <div class="absolute bottom-4 left-4 right-4 bg-slate-900/85 backdrop-blur-md p-4 rounded-2xl border border-white/15 text-white">
+                            <div class="flex items-center justify-between gap-3">
+                                <div>
+                                    <span class="inline-block px-2 py-0.5 bg-emerald-500/20 text-emerald-300 font-bold text-[10px] rounded uppercase tracking-wider">Fisik Sudah Berdiri</span>
+                                    <h4 class="font-bold text-sm sm:text-base text-white mt-0.5">Bisa Langsung Lihat & Cek Kualitas</h4>
+                                    <p class="text-xs text-slate-300">Unit contoh & fisik bangunan siap disurvei langsung.</p>
+                                </div>
+                                <div class="shrink-0 w-12 h-12 bg-brand-500 rounded-xl flex items-center justify-center text-brand-900 font-bold shadow-md">
+                                    <i data-lucide="zoom-in" class="w-6 h-6 text-white"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mini Floating Tag -->
+                    <div class="hidden sm:flex absolute -top-4 -left-6 bg-white text-slate-900 font-bold px-4 py-2 rounded-xl shadow-xl items-center gap-2 border border-slate-100">
+                        <span class="w-3 h-3 rounded-full bg-emerald-500"></span>
+                        <span class="text-xs">Double Carport Luas</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: INTERACTIVE BEFORE / AFTER SLIDERS (Kekuatan Visual Ruang Nyata vs Potensi Desain) -->
+    <section id="sebelum-sesudah" class="py-16 sm:py-24 bg-white border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="text-brand-600 font-bold text-xs uppercase tracking-widest bg-brand-50 px-3 py-1.5 rounded-full border border-brand-200">Interactive Visual Showcase</span>
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-3">
+                    Geser Slider: Lihat Potensi Ruang Nyata Saat Ditata
+                </h2>
+                <p class="text-slate-600 mt-3 text-base">
+                    Geser garis putih di tengah gambar untuk membandingkan kondisi fisik serah terima dengan potensi penataan interior impian keluarga Anda.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-10 items-stretch max-w-6xl mx-auto">
+                
+                <!-- Comparison 1: Ruang Makan / High Void -->
+                <div class="bg-slate-50 p-6 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="font-bold text-slate-900 text-lg">Area Dining & Plafon Void Mezanin</h3>
+                            <span class="text-xs font-semibold text-amber-700 bg-amber-100 px-2.5 py-1 rounded-full">Tarik Slider ↔</span>
+                        </div>
+                        
+                        <!-- Slider Container -->
+                        <div class="ba-slider aspect-[4/3] shadow-inner border border-slate-200" id="sliderDining">
+                            <!-- After Image (Full width background) -->
+                            <img src="assets/images/interior-staged-dining.jpg" alt="Inspirasi Meja Makan Void Lampu Gantung Mewah">
+                            <div class="absolute bottom-3 right-3 bg-slate-900/80 text-white text-[11px] font-bold px-2.5 py-1 rounded-lg backdrop-blur-sm pointer-events-none z-10">
+                                Sesudah Di-Staging ✨
+                            </div>
+
+                            <!-- Before Image (Clipped inside resize div) -->
+                            <div class="resize">
+                                <img src="assets/images/interior-empty-dining.jpg" alt="Kondisi Fisik Ruangan Mezanin Asli">
+                                <div class="absolute bottom-3 left-3 bg-brand-900/80 text-amber-300 text-[11px] font-bold px-2.5 py-1 rounded-lg backdrop-blur-sm pointer-events-none">
+                                    Fisik Asli Ruangan 📷
+                                </div>
+                            </div>
+
+                            <!-- Handle -->
+                            <div class="handle">
+                                <div class="handle-circle">
+                                    <i data-lucide="chevrons-left-right" class="w-4 h-4 text-slate-700"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-5 text-xs text-slate-600 leading-relaxed">
+                        <strong>Kelebihan Arsitektur:</strong> Ketinggian plafon void mencapai lebih dari 5 meter. Sirkulasi udara vertikal membuat ruangan tetap dingin alami, hemat konsumsi listrik AC di siang hari.
+                    </div>
+                </div>
+
+                <!-- Comparison 2: Halaman Belakang / Zen Garden -->
+                <div class="bg-slate-50 p-6 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="font-bold text-slate-900 text-lg">Sisa Tanah Belakang & Zen Courtyard</h3>
+                            <span class="text-xs font-semibold text-emerald-700 bg-emerald-100 px-2.5 py-1 rounded-full">Tarik Slider ↔</span>
+                        </div>
+                        
+                        <!-- Slider Container -->
+                        <div class="ba-slider aspect-[4/3] shadow-inner border border-slate-200" id="sliderBackyard">
+                            <!-- After Image -->
+                            <img src="assets/images/backyard-staged-garden.jpg" alt="Inspirasi Zen Garden Taman Kering Modern">
+                            <div class="absolute bottom-3 right-3 bg-slate-900/80 text-white text-[11px] font-bold px-2.5 py-1 rounded-lg backdrop-blur-sm pointer-events-none z-10">
+                                Konsep Zen Garden 🌿
+                            </div>
+
+                            <!-- Before Image -->
+                            <div class="resize">
+                                <img src="assets/images/backyard-real.jpg" alt="Kondisi Sisa Tanah Belakang Asli">
+                                <div class="absolute bottom-3 left-3 bg-brand-900/80 text-amber-300 text-[11px] font-bold px-2.5 py-1 rounded-lg backdrop-blur-sm pointer-events-none">
+                                    Lahan Belakang Riil 📐
+                                </div>
+                            </div>
+
+                            <!-- Handle -->
+                            <div class="handle">
+                                <div class="handle-circle">
+                                    <i data-lucide="chevrons-left-right" class="w-4 h-4 text-slate-700"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-5 text-xs text-slate-600 leading-relaxed">
+                        <strong>Fleksibilitas Lahan:</strong> Bukan tipe rumah tembok mentok. Anda memiliki ruang terbuka privat di belakang untuk taman santai ngopi sore, area bermain anak, atau ruang jemur higienis.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: THE REAL FINANCIAL MATH (Ngontrak vs Miliki Sendiri) -->
+    <section id="solusi" class="py-16 sm:py-24 bg-slate-50 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="text-brand-600 font-bold text-xs uppercase tracking-widest bg-brand-50 px-3 py-1.5 rounded-full border border-brand-200">Analisis Finansial Cerdas</span>
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-3">
+                    Mengapa Terus "Membakar Uang" untuk Kontrakan Jika Bisa Punya Aset Sendiri?
+                </h2>
+                <p class="text-slate-600 mt-4 text-base">
+                    Banyak keluarga muda ragu mengambil rumah karena takut cicilan. Mari kita hitung fakta matematisnya secara jujur:
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 items-stretch max-w-4xl mx-auto">
+                
+                <!-- Card Kontrakan -->
+                <div class="bg-rose-50/60 rounded-3xl p-8 border border-rose-200/80 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="px-3 py-1 bg-rose-200/70 text-rose-800 text-xs font-bold rounded-lg uppercase">Opsi 1: Tetap Ngontrak</span>
+                            <i data-lucide="trending-down" class="w-6 h-6 text-rose-500"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Sewa Rp 2,5 - 3,5 Juta / Bulan</h3>
+                        <p class="text-sm text-slate-600 mb-6">Tinggal di rumah orang lain atau apartemen sewa selama 5-10 tahun ke depan.</p>
+                        
+                        <ul class="space-y-3 text-sm text-slate-700">
+                            <li class="flex items-start gap-2.5">
+                                <i data-lucide="x" class="w-5 h-5 text-rose-500 shrink-0 mt-0.5"></i>
+                                <span><strong>Rp 180 Juta - Rp 300 Juta menguap</strong> tanpa sisa aset sepeser pun.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i data-lucide="x" class="w-5 h-5 text-rose-500 shrink-0 mt-0.5"></i>
+                                <span>Harga tanah & rumah di Depok naik 8-15% tiap tahun (semakin tak terkejar).</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i data-lucide="x" class="w-5 h-5 text-rose-500 shrink-0 mt-0.5"></i>
+                                <span>Tidak bebas renovasi, dekorasi terbatas, dan risiko harga sewa dinaikkan pemilik.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-8 pt-6 border-t border-rose-200 text-center">
+                        <span class="text-xs text-rose-700 font-semibold uppercase tracking-wider block">Hasil Akhir 5 Tahun</span>
+                        <span class="text-xl font-black text-rose-600">Aset Rp 0 (Nol Rupiah)</span>
+                    </div>
+                </div>
+
+                <!-- Card Sawangan Urban Homes -->
+                <div class="bg-gradient-to-b from-brand-50 to-amber-50/50 rounded-3xl p-8 border-2 border-brand-500/40 shadow-xl flex flex-col justify-between relative">
+                    <div class="absolute -top-3.5 right-8 bg-brand-500 text-brand-900 font-extrabold text-xs px-3.5 py-1 rounded-full shadow-md">
+                        REKOMENDASI TERBAIK
+                    </div>
+
+                    <div>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="px-3 py-1 bg-brand-500/20 text-brand-700 text-xs font-bold rounded-lg uppercase">Opsi 2: Sawangan Urban Homes</span>
+                            <i data-lucide="trending-up" class="w-6 h-6 text-brand-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Cicilan Mulai Rp 2,8 Jt / Bulan</h3>
+                        <p class="text-sm text-slate-600 mb-6">Atau ambil Kavling SHM 66m² cuma 280 Juta (Bebas bangun kapan saja).</p>
+                        
+                        <ul class="space-y-3 text-sm text-slate-800">
+                            <li class="flex items-start gap-2.5">
+                                <i data-lucide="check" class="w-5 h-5 text-emerald-600 shrink-0 mt-0.5"></i>
+                                <span>Uang bulanan jadi <strong>tabungan aset nyata milik sendiri</strong> atas nama Anda.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i data-lucide="check" class="w-5 h-5 text-emerald-600 shrink-0 mt-0.5"></i>
+                                <span>Nilai capital gain tinggi karena dekat akses Tol Desari & rencana fasilitas modern.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i data-lucide="check" class="w-5 h-5 text-emerald-600 shrink-0 mt-0.5"></i>
+                                <span>Bebas modifikasi ruang, punya halaman belakang sendiri, dan aman untuk keluarga.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-8 pt-6 border-t border-brand-200 text-center">
+                        <span class="text-xs text-brand-700 font-semibold uppercase tracking-wider block">Hasil Akhir 5 Tahun</span>
+                        <span class="text-xl font-black text-slate-900">Miliki Properti Bernilai Rp 600 Jt++</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: CLUSTER SITE PLAN & SCARCITY MAP (FOMO Trigger) -->
+    <section id="site-plan" class="py-16 sm:py-24 bg-white border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="text-brand-600 font-bold text-xs uppercase tracking-widest bg-brand-50 px-3 py-1.5 rounded-full border border-brand-200">Peta Kavling Resmi — Jl. H. Jawi, Sawangan</span>
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-3">
+                    Skema Site Plan: 13 Unit Eksklusif (A1 - A13)
+                </h2>
+                <p class="text-slate-600 mt-2 text-sm sm:text-base">
+                    Lahan matang siap bangun ukuran <strong>66 m² (6m × 11m)</strong> per kavling di lingkungan yang tenang, privat, dan aman.
+                </p>
+            </div>
+
+            <!-- Site Plan Schematic Card -->
+            <div class="bg-slate-900 text-white rounded-3xl p-6 sm:p-10 shadow-xl border border-white/10">
+                <!-- Legend -->
+                <div class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-slate-800 text-xs">
+                    <div class="flex items-center gap-6">
+                        <div class="flex items-center gap-2">
+                            <span class="w-3.5 h-3.5 rounded-md bg-emerald-500"></span>
+                            <span class="text-slate-300">Tersedia (Ready Survey)</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-3.5 h-3.5 rounded-md bg-amber-500"></span>
+                            <span class="text-slate-300">Tahap Booking KPR</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-3.5 h-3.5 rounded-md bg-rose-500"></span>
+                            <span class="text-slate-300">Terjual (Sold Out)</span>
+                        </div>
+                    </div>
+                    <span class="text-amber-400 font-bold text-xs">Akses Utama: Jl. H. Jawi</span>
+                </div>
+
+                <!-- Jalan Akses Bar -->
+                <div class="my-4 py-2 bg-slate-800/60 rounded-xl text-center text-xs font-mono text-slate-300 tracking-widest border border-slate-700">
+                    ▲ JALAN H. JAWI (AKSES GERBANG UTAMA) ▲
+                </div>
+
+                <!-- DERET 1: A1 - A6 (Deret Depan) -->
+                <div class="mb-4">
+                    <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block mb-2 text-left">Deret Depan (Blok A1 - A6):</span>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-2.5 text-center">
+                        <!-- A1 -->
+                        <div class="p-3.5 rounded-2xl bg-slate-800/80 border border-rose-500/30 opacity-70">
+                            <span class="text-[11px] text-slate-400 block font-mono">6x11m</span>
+                            <h4 class="font-bold text-sm text-white">Blok A1</h4>
+                            <span class="inline-block mt-1.5 text-[9px] font-bold px-2 py-0.5 rounded bg-rose-500/20 text-rose-400 uppercase">Terjual</span>
+                        </div>
+                        <!-- A2 -->
+                        <div class="p-3.5 rounded-2xl bg-slate-800 border-2 border-emerald-500 shadow-lg shadow-emerald-500/10 cursor-pointer hover:bg-slate-750 transition" onclick="openSurveyModal('Kavling / Rumah Blok A2')">
+                            <span class="text-[11px] text-emerald-400 block font-mono">6x11m</span>
+                            <h4 class="font-bold text-sm text-white">Blok A2</h4>
+                            <span class="inline-block mt-1.5 text-[9px] font-bold px-2 py-0.5 rounded bg-emerald-500 text-slate-900 uppercase">Tersedia</span>
+                        </div>
+                        <!-- A3 -->
+                        <div class="p-3.5 rounded-2xl bg-slate-800 border-2 border-emerald-500 shadow-lg shadow-emerald-500/10 cursor-pointer hover:bg-slate-750 transition" onclick="openSurveyModal('Rumah 2 Lantai Siap Huni Blok A3')">
+                            <span class="text-[11px] text-emerald-400 block font-mono">Rumah 2 Lt</span>
+                            <h4 class="font-bold text-sm text-white">Blok A3</h4>
+                            <span class="inline-block mt-1.5 text-[9px] font-bold px-2 py-0.5 rounded bg-emerald-500 text-slate-900 uppercase">Siap Huni</span>
+                        </div>
+                        <!-- A4 -->
+                        <div class="p-3.5 rounded-2xl bg-slate-800/90 border border-amber-500/40">
+                            <span class="text-[11px] text-slate-400 block font-mono">6x11m</span>
+                            <h4 class="font-bold text-sm text-white">Blok A4</h4>
+                            <span class="inline-block mt-1.5 text-[9px] font-bold px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 uppercase">Proses KPR</span>
+                        </div>
+                        <!-- A5 -->
+                        <div class="p-3.5 rounded-2xl bg-slate-800 border-2 border-emerald-500 shadow-lg shadow-emerald-500/10 cursor-pointer hover:bg-slate-750 transition" onclick="openSurveyModal('Kavling SHM 66m² Blok A5')">
+                            <span class="text-[11px] text-amber-400 block font-mono">Kavling SHM</span>
+                            <h4 class="font-bold text-sm text-white">Blok A5</h4>
+                            <span class="inline-block mt-1.5 text-[9px] font-bold px-2 py-0.5 rounded bg-emerald-500 text-slate-900 uppercase">Rp 280 Jt</span>
+                        </div>
+                        <!-- A6 (Corner) -->
+                        <div class="p-3.5 rounded-2xl bg-slate-800 border-2 border-emerald-500 shadow-lg shadow-emerald-500/10 cursor-pointer hover:bg-slate-750 transition" onclick="openSurveyModal('Kavling / Rumah Hook Blok A6')">
+                            <span class="text-[11px] text-amber-400 block font-mono">Hook 6x11</span>
+                            <h4 class="font-bold text-sm text-white">Blok A6</h4>
+                            <span class="inline-block mt-1.5 text-[9px] font-bold px-2 py-0.5 rounded bg-emerald-500 text-slate-900 uppercase">Tersedia</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Jalan Cluster Tengah (Row Jalan Lingkungan) -->
+                <div class="my-4 py-2 bg-slate-800/40 rounded-xl text-center text-[11px] font-mono text-slate-400 tracking-wider border border-dashed border-slate-700">
+                    ════ JALAN CLUSTER ONE GATE SYSTEM (LEBAR & PAVING) ════
+                </div>
+
+                <!-- DERET 2: A7 - A13 (Deret Dalam) -->
+                <div>
+                    <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block mb-2 text-left">Deret Dalam (Blok A7 - A13):</span>
+                    <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-2 text-center">
+                        <!-- A7 -->
+                        <div class="p-3 rounded-2xl bg-slate-800/80 border border-rose-500/30 opacity-70">
+                            <span class="text-[10px] text-slate-400 block font-mono">6x11m</span>
+                            <h4 class="font-bold text-xs sm:text-sm text-white">Blok A7</h4>
+                            <span class="inline-block mt-1 text-[8px] font-bold px-1.5 py-0.5 rounded bg-rose-500/20 text-rose-400 uppercase">Sold</span>
+                        </div>
+                        <!-- A8 -->
+                        <div class="p-3 rounded-2xl bg-slate-800 border border-emerald-500 cursor-pointer hover:bg-slate-750 transition" onclick="openSurveyModal('Kavling Blok A8')">
+                            <span class="text-[10px] text-emerald-400 block font-mono">6x11m</span>
+                            <h4 class="font-bold text-xs sm:text-sm text-white">Blok A8</h4>
+                            <span class="inline-block mt-1 text-[8px] font-bold px-1.5 py-0.5 rounded bg-emerald-500 text-slate-900 uppercase">Ready</span>
+                        </div>
+                        <!-- A9 -->
+                        <div class="p-3 rounded-2xl bg-slate-800 border border-emerald-500 cursor-pointer hover:bg-slate-750 transition" onclick="openSurveyModal('Kavling Blok A9')">
+                            <span class="text-[10px] text-emerald-400 block font-mono">6x11m</span>
+                            <h4 class="font-bold text-xs sm:text-sm text-white">Blok A9</h4>
+                            <span class="inline-block mt-1 text-[8px] font-bold px-1.5 py-0.5 rounded bg-emerald-500 text-slate-900 uppercase">Ready</span>
+                        </div>
+                        <!-- A10 -->
+                        <div class="p-3 rounded-2xl bg-slate-800/90 border border-amber-500/40">
+                            <span class="text-[10px] text-slate-400 block font-mono">6x11m</span>
+                            <h4 class="font-bold text-xs sm:text-sm text-white">Blok A10</h4>
+                            <span class="inline-block mt-1 text-[8px] font-bold px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-300 uppercase">Hold</span>
+                        </div>
+                        <!-- A11 -->
+                        <div class="p-3 rounded-2xl bg-slate-800 border border-emerald-500 cursor-pointer hover:bg-slate-750 transition" onclick="openSurveyModal('Kavling Blok A11')">
+                            <span class="text-[10px] text-emerald-400 block font-mono">6x11m</span>
+                            <h4 class="font-bold text-xs sm:text-sm text-white">Blok A11</h4>
+                            <span class="inline-block mt-1 text-[8px] font-bold px-1.5 py-0.5 rounded bg-emerald-500 text-slate-900 uppercase">Ready</span>
+                        </div>
+                        <!-- A12 -->
+                        <div class="p-3 rounded-2xl bg-slate-800 border border-emerald-500 cursor-pointer hover:bg-slate-750 transition" onclick="openSurveyModal('Kavling Blok A12')">
+                            <span class="text-[10px] text-emerald-400 block font-mono">6x11m</span>
+                            <h4 class="font-bold text-xs sm:text-sm text-white">Blok A12</h4>
+                            <span class="inline-block mt-1 text-[8px] font-bold px-1.5 py-0.5 rounded bg-emerald-500 text-slate-900 uppercase">Ready</span>
+                        </div>
+                        <!-- A13 -->
+                        <div class="p-3 rounded-2xl bg-slate-800 border border-emerald-500 cursor-pointer hover:bg-slate-750 transition" onclick="openSurveyModal('Kavling Hook Blok A13')">
+                            <span class="text-[10px] text-amber-400 block font-mono">Hook</span>
+                            <h4 class="font-bold text-xs sm:text-sm text-white">Blok A13</h4>
+                            <span class="inline-block mt-1 text-[8px] font-bold px-1.5 py-0.5 rounded bg-emerald-500 text-slate-900 uppercase">Ready</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gate Notification & Brochure Preview -->
+                <div class="mt-8 pt-6 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <div class="flex items-center gap-3 text-xs text-slate-300 text-left">
+                        <i data-lucide="info" class="w-5 h-5 text-amber-400 shrink-0"></i>
+                        <span>Ingin melihat lembar site plan resmi & foto tanah kavling matang?</span>
+                    </div>
+                    <div class="flex items-center gap-3 w-full sm:w-auto">
+                        <button onclick="openLightbox('assets/images/brochure-kavling-siteplan.jpg', 'Site Plan Resmi & Foto Lahan Matang 13 Unit Kavling Jl. H. Jawi Sawangan')" 
+                                class="inline-flex items-center justify-center gap-1.5 bg-slate-800 hover:bg-slate-700 text-amber-300 border border-amber-300/30 text-xs px-4 py-2.5 rounded-xl transition">
+                            <i data-lucide="image" class="w-4 h-4"></i>
+                            <span>Buka Site Plan Asli</span>
+                        </button>
+                        <button onclick="openSurveyModal('Pilih Blok Kavling A1-A13')" class="inline-flex items-center justify-center gap-2 bg-brand-500 hover:bg-brand-600 text-brand-900 font-extrabold text-xs sm:text-sm px-5 py-2.5 rounded-xl transition flex-1 sm:flex-initial">
+                            <i data-lucide="check-square" class="w-4 h-4"></i>
+                            <span>Kunci Blok Pilihan</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: GALERI REALITA & STAGING DETAILS -->
+    <section id="galeri-nyata" class="py-16 sm:py-24 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+                <div>
+                    <span class="text-amber-400 font-bold text-xs uppercase tracking-widest bg-white/10 px-3 py-1.5 rounded-full border border-white/10">Showcase Arsitektur</span>
+                    <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight mt-3">
+                        Detail Finishing Unit & Lingkungan Hunian
+                    </h2>
+                    <p class="text-slate-400 mt-2 text-sm sm:text-base max-w-2xl">
+                        Klik pada foto untuk melihat ukuran penuh (High Definition) dan periksa langsung kerapian pengerjaan kami.
+                    </p>
+                </div>
+                <div class="flex items-center gap-3">
+                    <a href="https://wa.me/6281911590700?text=Halo%20Admin%20Sawangan%20Urban%20Homes,%20saya%20mau%20minta%20video%20tur%20lengkap%20unit%20rumahnya." 
+                       target="_blank"
+                       class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 border border-white/20 text-white text-sm font-semibold px-4 py-2.5 rounded-xl transition">
+                        <i data-lucide="video" class="w-4 h-4 text-amber-400"></i>
+                        <span>Minta Video Tur Unit Lengkap</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Bento Grid Visual Showcase -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+                
+                <!-- Card 1: Master Bedroom -->
+                <div class="md:col-span-6 bg-slate-800 rounded-3xl overflow-hidden border border-white/10 group cursor-pointer" onclick="openLightbox('assets/images/interior-staged-bedroom.jpg', 'Master Bedroom Nuansa Japandi dengan Akses Balkon Luar')">
+                    <div class="relative overflow-hidden aspect-[16/10]">
+                        <img src="assets/images/interior-staged-bedroom.jpg" 
+                             alt="Master Bedroom dengan Balkon Sawangan Urban Homes" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute top-4 left-4 bg-slate-900/80 backdrop-blur-md text-white text-xs font-bold px-3 py-1 rounded-full border border-white/20">
+                            Kamar Utama dengan Balkon
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-lg font-bold text-white mb-1">Kamar Tidur Utama Bernuansa Japandi</h4>
+                        <p class="text-sm text-slate-400">
+                            Dilengkapi pintu geser kaca lebar yang terhubung langsung ke balkon luar untuk menikmati udara pagi Sawangan yang asri.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 2: Real Bathroom Specs -->
+                <div class="md:col-span-6 bg-slate-800 rounded-3xl overflow-hidden border border-white/10 group cursor-pointer" onclick="openLightbox('assets/images/bathroom-real.jpg', 'Kamar Mandi Riil: Dinding Granit Abu Slate, Exhaust & Shower')">
+                    <div class="relative overflow-hidden aspect-[16/10]">
+                        <img src="assets/images/bathroom-real.jpg" 
+                             alt="Kamar Mandi Finishing Granit Abu-abu Sawangan Urban Homes" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute top-4 left-4 bg-emerald-500/90 text-white text-xs font-bold px-3 py-1 rounded-full">
+                            Foto Fisik Nyata
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-lg font-bold text-white mb-1">Kamar Mandi Modern Bernuansa Abu Slate</h4>
+                        <p class="text-sm text-slate-400">
+                            Dinding granit penuh, exhaust fan terpasang, hand shower stainless, dan kloset duduk modern standar masa kini.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 2B: 3D Row Render (Deret Unit Cluster) -->
+                <div class="md:col-span-12 bg-slate-800 rounded-3xl overflow-hidden border border-white/10 group cursor-pointer" onclick="openLightbox('assets/images/render-cluster-row.jpg', 'Visual Render Deret 3 Unit Rumah 2 Lantai Modern Sawangan Urban Homes dengan Carport & Balcony')">
+                    <div class="grid md:grid-cols-12 items-center">
+                        <div class="md:col-span-7 overflow-hidden aspect-[16/9]">
+                            <img src="assets/images/render-cluster-row.jpg" 
+                                 alt="Desain Deret Unit Rumah 2 Lantai Sawangan Urban Homes" 
+                                 class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        </div>
+                        <div class="md:col-span-5 p-8 text-left">
+                            <span class="text-xs font-bold text-amber-400 uppercase tracking-widest block mb-2">Fasad Modern Tropical</span>
+                            <h3 class="text-2xl font-extrabold text-white mb-3">Harmoni Desain 2 Lantai dengan Aksen Kayu Alami</h3>
+                            <p class="text-sm text-slate-300 leading-relaxed mb-4">
+                                Setiap unit dirancang serasi dengan kanopi beton kokoh, pencahayaan skylight di atas void, serta dinding pemisah antar rumah yang tebal untuk menjaga privasi akustik keluarga.
+                            </p>
+                            <div class="flex items-center gap-3">
+                                <span class="px-3 py-1 rounded-lg bg-white/10 text-xs text-amber-300 font-mono">LT 66 / LB 65</span>
+                                <span class="px-3 py-1 rounded-lg bg-white/10 text-xs text-slate-300 font-mono">Listrik 2200W</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Safe Environment For Kids -->
+                <div class="md:col-span-12 bg-slate-800 rounded-3xl overflow-hidden border border-white/10 group">
+                    <div class="grid md:grid-cols-12 items-center">
+                        <div class="md:col-span-6 overflow-hidden aspect-video cursor-pointer" onclick="openLightbox('assets/images/poster-kids.jpg', 'Suasana Cluster Ramah Anak: Bermain Bola & Sepeda dengan Aman')">
+                            <img src="assets/images/poster-kids.jpg" 
+                                 alt="Anak-anak bermain aman di cluster Sawangan Urban Homes" 
+                                 class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        </div>
+                        <div class="md:col-span-6 p-8 text-left">
+                            <div class="text-amber-400 font-bold text-xs uppercase mb-2">Keamanan & Keharmonisan Cluster</div>
+                            <h3 class="text-2xl font-bold text-white mb-3">Lingkungan yang Memang Diciptakan untuk Tumbuh Kembang Anak</h3>
+                            <p class="text-sm text-slate-300 leading-relaxed mb-6">
+                                Row jalan cluster yang lega dan penerapan One Gate System 24 Jam memastikan anak-anak bisa bebas bermain sepeda atau bola di depan rumah tanpa perlu khawatir lalu-lalang kendaraan umum.
+                            </p>
+                            <button onclick="openSurveyModal()" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm px-5 py-3 rounded-xl transition">
+                                <i data-lucide="map-pin" class="w-4 h-4"></i>
+                                <span>Ajak Keluarga Survey Weekend Ini</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: PILIHAN SPESIAL UNIT & PRICING -->
+    <section id="pilihan-unit" class="py-16 sm:py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-600 font-bold text-xs uppercase tracking-widest bg-brand-50 px-3 py-1.5 rounded-full border border-brand-200">Katalog Produk</span>
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-3">
+                    Pilihan Spesial Sesuai Kebutuhan & Budget Anda
+                </h2>
+                <p class="text-slate-600 mt-3 text-base">
+                    Apakah Anda mencari rumah tinggal siap huni, atau kavling tanah matang SHM untuk investasi dan dibangun bertahap? Semuanya tersedia.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8 items-stretch max-w-5xl mx-auto">
+                
+                <!-- PRODUCT 1: RUMAH MODERN 1 & 2 LANTAI -->
+                <div class="bg-white rounded-3xl shadow-xl border-2 border-brand-500/30 overflow-hidden flex flex-col justify-between hover:shadow-2xl transition">
+                    <div>
+                        <!-- Header Card -->
+                        <div class="p-8 pb-6 border-b border-slate-100">
+                            <div class="flex items-center justify-between gap-2 mb-3">
+                                <span class="bg-brand-900 text-brand-500 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Paling Populer</span>
+                                <span class="text-xs text-emerald-600 font-semibold bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-200">Siap KPR Bank</span>
+                            </div>
+                            <h3 class="text-2xl font-extrabold text-slate-900">Rumah Modern 1 & 2 Lantai</h3>
+                            <p class="text-sm text-slate-500 mt-1">Hunian compact tropical dengan void ceiling & sisa halaman belakang.</p>
+                            
+                            <div class="mt-6 flex items-baseline gap-2">
+                                <span class="text-sm font-semibold text-slate-400">Mulai dari</span>
+                                <span class="text-3xl sm:text-4xl font-black text-brand-900">Rp 400 Jt-an</span>
+                            </div>
+                            <span class="text-xs font-semibold text-brand-600 block mt-1">Estimasi cicilan KPR: ~Rp 2,8 Jt - 3,5 Jt / bulan</span>
+                        </div>
+
+                        <!-- Specifications List -->
+                        <div class="p-8 pt-6 space-y-4 text-sm">
+                            <div class="font-bold text-slate-900 text-xs uppercase tracking-wider text-slate-400">Keunggulan & Fasilitas Unit:</div>
+                            
+                            <div class="grid grid-cols-2 gap-3 text-xs sm:text-sm">
+                                <div class="flex items-center gap-2 text-slate-700">
+                                    <i data-lucide="bed-double" class="w-4 h-4 text-brand-600 shrink-0"></i>
+                                    <span>2 s/d 3 Kamar Tidur</span>
+                                </div>
+                                <div class="flex items-center gap-2 text-slate-700">
+                                    <i data-lucide="bath" class="w-4 h-4 text-brand-600 shrink-0"></i>
+                                    <span>1 s/d 2 Kamar Mandi</span>
+                                </div>
+                                <div class="flex items-center gap-2 text-slate-700">
+                                    <i data-lucide="car" class="w-4 h-4 text-brand-600 shrink-0"></i>
+                                    <span>Carport Mobil + Motor</span>
+                                </div>
+                                <div class="flex items-center gap-2 text-slate-700">
+                                    <i data-lucide="trees" class="w-4 h-4 text-brand-600 shrink-0"></i>
+                                    <span>Taman Depan & Belakang</span>
+                                </div>
+                                <div class="flex items-center gap-2 text-slate-700">
+                                    <i data-lucide="maximize" class="w-4 h-4 text-brand-600 shrink-0"></i>
+                                    <span>High Void Ceiling</span>
+                                </div>
+                                <div class="flex items-center gap-2 text-slate-700">
+                                    <i data-lucide="zap" class="w-4 h-4 text-brand-600 shrink-0"></i>
+                                    <span>Listrik 2200W & Jetpump</span>
+                                </div>
+                            </div>
+
+                            <div class="bg-slate-50 p-4 rounded-xl border border-slate-100 mt-4">
+                                <div class="text-xs font-bold text-slate-800 flex items-center gap-1.5 mb-1">
+                                    <i data-lucide="gift" class="w-4 h-4 text-brand-600"></i>
+                                    <span>Bonus Terbatas Minggu Ini:</span>
+                                </div>
+                                <p class="text-xs text-slate-600">Free Canopy Carport + Potongan Biaya Notaris & KPR!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bottom CTA -->
+                    <div class="p-8 pt-0">
+                        <button onclick="openSurveyModal('Rumah Modern 1 & 2 Lantai (Mulai 400 Juta)')" 
+                                class="w-full inline-flex items-center justify-center gap-2 bg-brand-900 hover:bg-brand-800 text-white font-bold py-3.5 px-6 rounded-xl shadow-md transition text-sm">
+                            <i data-lucide="message-circle" class="w-4 h-4 text-brand-500"></i>
+                            <span>Tanya Detail Rumah via WhatsApp</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- PRODUCT 2: KAVLING SHM 66 M2 -->
+                <div class="bg-white rounded-3xl shadow-xl border border-slate-200 overflow-hidden flex flex-col justify-between hover:shadow-2xl transition">
+                    <div>
+                        <!-- Header Card -->
+                        <div class="p-8 pb-6 border-b border-slate-100 bg-gradient-to-br from-emerald-50/50 to-white">
+                            <div class="flex items-center justify-between gap-2 mb-3">
+                                <span class="bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Investasi Cerdas</span>
+                                <span class="text-xs text-emerald-700 font-bold bg-emerald-100/80 px-2.5 py-1 rounded-md">SHM Ready</span>
+                            </div>
+                            <h3 class="text-2xl font-extrabold text-slate-900">Kavling Siap Bangun 66 m²</h3>
+                            <p class="text-sm text-slate-500 mt-1">Tanah matang dalam cluster one gate, siap bangun kapan saja.</p>
+                            
+                            <div class="mt-6 flex items-baseline gap-2">
+                                <span class="text-sm font-semibold text-slate-400">Harga Spesial</span>
+                                <span class="text-3xl sm:text-4xl font-black text-emerald-600">Hanya Rp 280 Juta</span>
+                            </div>
+                            <span class="text-xs font-bold text-emerald-700 block mt-1">✅ Sertifikat Hak Milik (SHM) Sudah Pecah</span>
+                        </div>
+
+                        <!-- Specifications List -->
+                        <div class="p-8 pt-6 space-y-4 text-sm">
+                            <div class="font-bold text-slate-900 text-xs uppercase tracking-wider text-slate-400">Keuntungan Membeli Kavling:</div>
+                            
+                            <ul class="space-y-3 text-xs sm:text-sm text-slate-700">
+                                <li class="flex items-start gap-2.5">
+                                    <i data-lucide="check-circle" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>
+                                    <span><strong>Gratis Biaya Pajak & Balik Nama Notaris*</strong> (Hemat puluhan juta).</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i data-lucide="check-circle" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>
+                                    <span>Bisa dibangun rumah sesuai selera desain Anda sendiri tanpa batas arsitektur kaku.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i data-lucide="check-circle" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>
+                                    <span>Infrastruktur cluster sudah siap: Jalan paving/aspal, saluran air & listrik.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <i data-lucide="check-circle" class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5"></i>
+                                    <span>Investasi anti rugi: Kenaikan harga tanah di Sawangan terus meroket.</span>
+                                </li>
+                            </ul>
+
+                            <div class="bg-emerald-50/70 p-4 rounded-xl border border-emerald-100 mt-4">
+                                <span class="text-xs font-bold text-emerald-900 block mb-0.5">Unit Kavling Sangat Terbatas!</span>
+                                <p class="text-xs text-emerald-700">Hanya sisa beberapa blok kavling dengan posisi strategis dekat gerbang utama.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bottom CTA -->
+                    <div class="p-8 pt-0">
+                        <button onclick="openSurveyModal('Kavling SHM 66m² (Rp 280 Juta)')" 
+                                class="w-full inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 px-6 rounded-xl shadow-md transition text-sm">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-white"></i>
+                            <span>Cek Ketersediaan Kavling (WhatsApp)</span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: INTERACTIVE FLOOR PLAN / DENAH TATA RUANG -->
+    <section id="denah" class="py-16 sm:py-24 bg-white border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="text-brand-600 font-bold text-xs uppercase tracking-widest bg-brand-50 px-3 py-1.5 rounded-full border border-brand-200">Denah & Tata Ruang</span>
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-3">
+                    Desain Tata Ruang Fleksibel & Sirkulasi Maksimal
+                </h2>
+                <p class="text-slate-600 mt-3 text-base">
+                    Dirancang dengan konsep <em>Compact Tropical</em>: Plafon mezanin void tinggi, pencahayaan alami di setiap sudut, dan sisa tanah belakang yang lapang.
+                </p>
+
+                <!-- Floor Plan Switcher Tabs -->
+                <div class="inline-flex p-1.5 bg-slate-100 rounded-2xl border border-slate-200 mt-6 shadow-inner">
+                    <button type="button" id="tabFloor1" onclick="switchFloor(1)" 
+                            class="px-5 py-2.5 rounded-xl font-extrabold text-xs sm:text-sm transition-all duration-200 bg-brand-900 text-white shadow-md">
+                        Lantai 1: Living, Void & Taman
+                    </button>
+                    <button type="button" id="tabFloor2" onclick="switchFloor(2)" 
+                            class="px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm text-slate-600 hover:text-slate-900 transition-all duration-200">
+                        Lantai 2: Master Bed & Balkon
+                    </button>
+                </div>
+            </div>
+
+            <div class="grid lg:grid-cols-12 gap-8 items-center max-w-5xl mx-auto">
+                
+                <!-- Floor Plan Blueprint Viewer (SVG Graphic) -->
+                <div class="lg:col-span-7 bg-slate-900 rounded-3xl p-6 sm:p-8 shadow-2xl border border-slate-800 text-white relative overflow-hidden">
+                    <div class="flex items-center justify-between mb-4 pb-3 border-b border-slate-800">
+                        <div>
+                            <span class="text-[11px] font-mono uppercase tracking-widest text-amber-400 font-bold" id="blueprintSubTitle">BLUEPRINT ARSITEKTUR</span>
+                            <h4 class="text-lg font-bold text-white" id="blueprintTitle">Denah Lantai 1 (Ground Floor)</h4>
+                        </div>
+                        <span class="px-2.5 py-1 rounded bg-slate-800 border border-slate-700 text-xs font-mono text-slate-300">Skala 1:100</span>
+                    </div>
+
+                    <!-- SVG Blueprint Canvas Container -->
+                    <div class="relative aspect-[3/4] bg-slate-950/80 rounded-2xl p-4 border border-slate-800/80 flex items-center justify-center">
+                        
+                        <!-- FLOOR 1 SVG -->
+                        <svg id="svgFloor1" viewBox="0 0 320 420" class="w-full h-full max-h-[400px] transition-opacity duration-300">
+                            <!-- Background Grid -->
+                            <defs>
+                                <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+                                    <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(255, 255, 255, 0.05)" stroke-width="1"/>
+                                </pattern>
+                            </defs>
+                            <rect width="320" height="420" fill="url(#grid)" />
+
+                            <!-- Outer Boundary Walls (6m x 11m) -->
+                            <rect x="30" y="20" width="260" height="380" fill="rgba(30, 41, 59, 0.3)" stroke="#c59a3f" stroke-width="3" rx="4"/>
+
+                            <!-- AREA 1: Sisa Lahan Belakang (Zen Garden) -->
+                            <rect x="35" y="25" width="250" height="75" fill="rgba(16, 185, 129, 0.15)" stroke="#10b981" stroke-width="1.5" stroke-dasharray="4"/>
+                            <text x="160" y="60" fill="#6ee7b7" font-size="11" font-weight="bold" text-anchor="middle" font-family="sans-serif">TAMAN BELAKANG / COURTYARD</text>
+                            <text x="160" y="75" fill="#a7f3d0" font-size="9" text-anchor="middle" font-family="sans-serif">(6.0 m x 3.0 m - Sisa Tanah Luas)</text>
+
+                            <!-- AREA 2: Meja Dapur / Kitchen Sink & Kamar Mandi 1 -->
+                            <rect x="35" y="105" width="110" height="60" fill="rgba(255, 255, 255, 0.05)" stroke="#94a3b8" stroke-width="1.5"/>
+                            <text x="90" y="135" fill="#f8fafc" font-size="10" font-weight="bold" text-anchor="middle" font-family="sans-serif">DAPUR & SINK</text>
+                            <text x="90" y="148" fill="#94a3b8" font-size="8" text-anchor="middle" font-family="sans-serif">(2.5 x 2.0 m)</text>
+
+                            <!-- Kamar Mandi 1 -->
+                            <rect x="150" y="105" width="80" height="60" fill="rgba(56, 189, 248, 0.12)" stroke="#38bdf8" stroke-width="1.5"/>
+                            <text x="190" y="135" fill="#bae6fd" font-size="9" font-weight="bold" text-anchor="middle" font-family="sans-serif">KM 1</text>
+                            <text x="190" y="148" fill="#7dd3fc" font-size="8" text-anchor="middle" font-family="sans-serif">(Granit)</text>
+
+                            <!-- AREA 3: Living & Dining Room dengan HIGH VOID -->
+                            <rect x="35" y="170" width="170" height="110" fill="rgba(197, 154, 63, 0.2)" stroke="#c59a3f" stroke-width="2"/>
+                            <text x="120" y="215" fill="#fde68a" font-size="11" font-weight="extrabold" text-anchor="middle" font-family="sans-serif">LIVING & DINING ROOM</text>
+                            <rect x="60" y="230" width="120" height="30" fill="rgba(197, 154, 63, 0.3)" stroke="#f59e0b" stroke-width="1" stroke-dasharray="3"/>
+                            <text x="120" y="250" fill="#fef08a" font-size="9" font-weight="bold" text-anchor="middle" font-family="sans-serif">★ HIGH VOID CEILING (&gt;5m)</text>
+
+                            <!-- Tangga ke Lantai 2 -->
+                            <rect x="210" y="170" width="75" height="110" fill="rgba(255, 255, 255, 0.08)" stroke="#cbd5e1" stroke-width="1"/>
+                            <line x1="210" y1="185" x2="285" y2="185" stroke="#94a3b8" stroke-width="1"/>
+                            <line x1="210" y1="200" x2="285" y2="200" stroke="#94a3b8" stroke-width="1"/>
+                            <line x1="210" y1="215" x2="285" y2="215" stroke="#94a3b8" stroke-width="1"/>
+                            <line x1="210" y1="230" x2="285" y2="230" stroke="#94a3b8" stroke-width="1"/>
+                            <line x1="210" y1="245" x2="285" y2="245" stroke="#94a3b8" stroke-width="1"/>
+                            <line x1="210" y1="260" x2="285" y2="260" stroke="#94a3b8" stroke-width="1"/>
+                            <text x="248" y="228" fill="#e2e8f0" font-size="9" font-weight="bold" text-anchor="middle" font-family="sans-serif">TANGGA ▲</text>
+
+                            <!-- AREA 4: Teras & Double Carport Depan -->
+                            <rect x="35" y="285" width="250" height="110" fill="rgba(255, 255, 255, 0.04)" stroke="#64748b" stroke-width="1.5"/>
+                            <text x="160" y="335" fill="#f8fafc" font-size="11" font-weight="bold" text-anchor="middle" font-family="sans-serif">DOUBLE CARPORT & TAMAN DEPAN</text>
+                            <text x="160" y="352" fill="#94a3b8" font-size="9" text-anchor="middle" font-family="sans-serif">(Lebar 6.0 m - Muat 2 Mobil & Motor)</text>
+                        </svg>
+
+                        <!-- FLOOR 2 SVG -->
+                        <svg id="svgFloor2" viewBox="0 0 320 420" class="w-full h-full max-h-[400px] transition-opacity duration-300 hidden">
+                            <rect width="320" height="420" fill="url(#grid)" />
+
+                            <!-- Outer Boundary Walls -->
+                            <rect x="30" y="20" width="260" height="380" fill="rgba(30, 41, 59, 0.3)" stroke="#c59a3f" stroke-width="3" rx="4"/>
+
+                            <!-- AREA 1 ATAS: Kamar Tidur Anak 2 -->
+                            <rect x="35" y="25" width="165" height="100" fill="rgba(255, 255, 255, 0.06)" stroke="#94a3b8" stroke-width="1.5"/>
+                            <text x="117" y="70" fill="#ffffff" font-size="11" font-weight="bold" text-anchor="middle" font-family="sans-serif">KAMAR TIDUR 2</text>
+                            <text x="117" y="86" fill="#94a3b8" font-size="9" text-anchor="middle" font-family="sans-serif">(Kamar Anak / Ruang Kerja - 3.2 x 3.0 m)</text>
+
+                            <!-- Kamar Mandi 2 Atas -->
+                            <rect x="205" y="25" width="80" height="70" fill="rgba(56, 189, 248, 0.12)" stroke="#38bdf8" stroke-width="1.5"/>
+                            <text x="245" y="60" fill="#bae6fd" font-size="9" font-weight="bold" text-anchor="middle" font-family="sans-serif">KM 2</text>
+                            <text x="245" y="73" fill="#7dd3fc" font-size="8" text-anchor="middle" font-family="sans-serif">(Lantai Atas)</text>
+
+                            <!-- AREA 2 ATAS: AREA VOID (Tembus ke Lantai 1) & Mezzanine Hallway -->
+                            <rect x="35" y="130" width="165" height="110" fill="rgba(251, 191, 36, 0.15)" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="4"/>
+                            <text x="117" y="180" fill="#fde68a" font-size="11" font-weight="extrabold" text-anchor="middle" font-family="sans-serif">VOID AREA MEZANIN</text>
+                            <text x="117" y="196" fill="#fef08a" font-size="8" text-anchor="middle" font-family="sans-serif">(Tembus ke Ruang Makan Bawah)</text>
+
+                            <!-- Hallway Koridor Atas -->
+                            <rect x="205" y="100" width="80" height="140" fill="rgba(255, 255, 255, 0.08)" stroke="#cbd5e1" stroke-width="1"/>
+                            <text x="245" y="170" fill="#cbd5e1" font-size="9" font-weight="bold" text-anchor="middle" font-family="sans-serif">KORIDOR</text>
+
+                            <!-- AREA 3 ATAS: MASTER BEDROOM (Kamar Utama) -->
+                            <rect x="35" y="245" width="250" height="110" fill="rgba(197, 154, 63, 0.22)" stroke="#c59a3f" stroke-width="2"/>
+                            <text x="160" y="295" fill="#fde68a" font-size="12" font-weight="extrabold" text-anchor="middle" font-family="sans-serif">MASTER BEDROOM (KAMAR UTAMA)</text>
+                            <text x="160" y="312" fill="#e2e8f0" font-size="9" text-anchor="middle" font-family="sans-serif">(Ukuran Lega 3.6 x 3.5 m - Jendela Kaca Lebar)</text>
+
+                            <!-- Balkon Luar Depan -->
+                            <rect x="35" y="360" width="250" height="35" fill="rgba(16, 185, 129, 0.2)" stroke="#10b981" stroke-width="1.5"/>
+                            <text x="160" y="382" fill="#a7f3d0" font-size="10" font-weight="bold" text-anchor="middle" font-family="sans-serif">BALKON LUAR PRIVAT (Pintu Kaca Geser)</text>
+                        </svg>
+
+                    </div>
+
+                    <div class="mt-4 flex items-center justify-between text-xs text-slate-400">
+                        <span>💡 Tip: Layout ruangan dapat disesuaikan (custom interior).</span>
+                        <span class="text-amber-400 font-bold">Tipe 65 / 66 m²</span>
+                    </div>
+                </div>
+
+                <!-- Specifications Breakdown Details -->
+                <div class="lg:col-span-5 space-y-5 text-left">
+                    <div class="bg-slate-50 p-6 rounded-3xl border border-slate-200">
+                        <span class="text-xs font-bold text-brand-600 uppercase tracking-wider block mb-1">Highlight Ruangan</span>
+                        <h3 class="text-xl font-extrabold text-slate-900" id="specDetailTitle">Fasilitas Lantai 1</h3>
+                        
+                        <div class="mt-4 space-y-3.5 text-xs sm:text-sm text-slate-700" id="specListLantai1">
+                            <div class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-lg bg-brand-100 text-brand-800 flex items-center justify-center shrink-0 font-bold text-xs">1</div>
+                                <div>
+                                    <strong class="text-slate-900 block">Double Carport Lebar (Muat 2 Mobil):</strong>
+                                    <span>Tidak perlu pusing parkir mobil di jalan tetangga. Row depan muat 2 mobil + motor.</span>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-lg bg-brand-100 text-brand-800 flex items-center justify-center shrink-0 font-bold text-xs">2</div>
+                                <div>
+                                    <strong class="text-slate-900 block">High Void Living Room:</strong>
+                                    <span>Plafon tinggi >5 meter menghadirkan sirkulasi udara dingin dan view jendela atas.</span>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-lg bg-brand-100 text-brand-800 flex items-center justify-center shrink-0 font-bold text-xs">3</div>
+                                <div>
+                                    <strong class="text-slate-900 block">Private Backyard (6.0 x 3.0 m):</strong>
+                                    <span>Lahan belakang luas untuk zen garden, coffee corner, atau laundry area higienis.</span>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-lg bg-brand-100 text-brand-800 flex items-center justify-center shrink-0 font-bold text-xs">4</div>
+                                <div>
+                                    <strong class="text-slate-900 block">Kamar Mandi Granit Modern:</strong>
+                                    <span>Dinding granit abu-abu slate, kloset duduk, shower, dan ventilasi exhaust fan.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-4 space-y-3.5 text-xs sm:text-sm text-slate-700 hidden" id="specListLantai2">
+                            <div class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-lg bg-amber-100 text-amber-800 flex items-center justify-center shrink-0 font-bold text-xs">1</div>
+                                <div>
+                                    <strong class="text-slate-900 block">Master Bedroom dengan Balkon:</strong>
+                                    <span>Kamar utama bernuansa Japandi dengan pintu geser kaca menghadap ke pemandangan luar.</span>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-lg bg-amber-100 text-amber-800 flex items-center justify-center shrink-0 font-bold text-xs">2</div>
+                                <div>
+                                    <strong class="text-slate-900 block">Kamar Tidur Anak / Kamar Tamu:</strong>
+                                    <span>Ruangan kedua yang nyaman dan memiliki sirkulasi udara jendela luar.</span>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-lg bg-amber-100 text-amber-800 flex items-center justify-center shrink-0 font-bold text-xs">3</div>
+                                <div>
+                                    <strong class="text-slate-900 block">Koridor Mezanin Atas:</strong>
+                                    <span>Railing besi hitam minimalis yang bisa melihat langsung ke ruang tamu dan ruang makan bawah.</span>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-lg bg-amber-100 text-amber-800 flex items-center justify-center shrink-0 font-bold text-xs">4</div>
+                                <div>
+                                    <strong class="text-slate-900 block">Kamar Mandi 2 di Lantai Atas:</strong>
+                                    <span>Privat untuk penghuni lantai 2 tanpa perlu turun tangga saat malam hari.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Action Button -->
+                    <div class="space-y-3">
+                        <button onclick="openSurveyModal('Minta Brosur & Denah Resmi')" 
+                                class="w-full inline-flex items-center justify-center gap-2 bg-brand-900 hover:bg-brand-800 text-white font-extrabold py-3.5 px-6 rounded-xl shadow-md transition text-sm">
+                            <i data-lucide="file-text" class="w-4 h-4 text-brand-500"></i>
+                            <span>Dapatkan Brosur Denah Resmi (PDF)</span>
+                        </button>
+                        <span class="text-[11px] text-slate-500 text-center block">Tersedia denah ukuran CAD & spesifikasi struktur pondasi lengkap.</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: INTERACTIVE KPR CALCULATOR (Micro-Conversion Engine & Syariah/Konvensional Dual Mode) -->
+    <section id="simulasi-kpr" class="py-16 sm:py-24 bg-white border-y border-slate-200">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <span class="text-brand-600 font-bold text-xs uppercase tracking-widest bg-brand-50 px-3 py-1.5 rounded-full border border-brand-200">Kalkulator KPR Cepat</span>
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-3">
+                    Hitung Estimasi Cicilan Sesuai Prinsip Pilihan Anda
+                </h2>
+                <p class="text-slate-600 mt-2 text-sm sm:text-base">
+                    Pilih skema pembiayaan yang paling menenangkan keluarga Anda: <strong>KPR Syariah (Cicilan Flat Pasti)</strong> atau <strong>KPR Konvensional (Bunga Promo Rendah di Awal)</strong>.
+                </p>
+
+                <!-- Dual Mode Toggle Button -->
+                <div class="inline-flex p-1.5 bg-slate-100 rounded-2xl border border-slate-200 mt-6 shadow-inner">
+                    <button type="button" id="tabKprSyariah" onclick="setKprScheme('syariah')" 
+                            class="px-5 py-2.5 rounded-xl font-extrabold text-xs sm:text-sm transition-all duration-200 bg-emerald-700 text-white shadow-md flex items-center gap-2">
+                        <span>🕌</span>
+                        <span>KPR Syariah (Flat Anti-Riba)</span>
+                    </button>
+                    <button type="button" id="tabKprKonven" onclick="setKprScheme('konven')" 
+                            class="px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm text-slate-600 hover:text-slate-900 transition-all duration-200 flex items-center gap-2">
+                        <span>🏦</span>
+                        <span>KPR Konvensional (Promo Fix)</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="bg-slate-900 text-white rounded-3xl p-6 sm:p-10 shadow-2xl border border-white/10">
+                <div class="grid md:grid-cols-12 gap-8 items-center">
+                    
+                    <!-- Controls -->
+                    <div class="md:col-span-7 space-y-6">
+                        <!-- Harga Properti -->
+                        <div>
+                            <div class="flex justify-between text-sm mb-2 font-semibold">
+                                <span class="text-slate-300">Pilihan Harga Properti:</span>
+                                <span id="displayHarga" class="text-amber-400 font-bold">Rp 450.000.000</span>
+                            </div>
+                            <input type="range" id="inputHarga" min="280000000" max="800000000" step="10000000" value="450000000"
+                                   class="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-brand-500">
+                            <div class="flex justify-between text-[11px] text-slate-400 mt-1">
+                                <span>280 Jt (Kavling)</span>
+                                <span>450 Jt (Rumah 2 Lt)</span>
+                                <span>800 Jt</span>
+                            </div>
+                        </div>
+
+                        <!-- Uang Muka / DP (%) -->
+                        <div>
+                            <div class="flex justify-between text-sm mb-2 font-semibold">
+                                <span class="text-slate-300">Uang Muka (DP):</span>
+                                <span id="displayDP" class="text-amber-400 font-bold">10% (Rp 45.000.000)</span>
+                            </div>
+                            <input type="range" id="inputDP" min="0" max="30" step="5" value="10"
+                                   class="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-brand-500">
+                            <div class="flex justify-between text-[11px] text-slate-400 mt-1">
+                                <span>0% (Promo DP 0)</span>
+                                <span>10%</span>
+                                <span>30%</span>
+                            </div>
+                        </div>
+
+                        <!-- Tenor KPR -->
+                        <div>
+                            <label class="block text-sm text-slate-300 mb-2 font-semibold">Pilihan Jangka Waktu (Tenor):</label>
+                            <div class="grid grid-cols-4 gap-2">
+                                <button type="button" onclick="setTenor(10)" class="tenor-btn py-2 text-xs font-bold rounded-xl border border-slate-700 hover:border-brand-500 text-slate-300 transition text-center" data-years="10">10 Thn</button>
+                                <button type="button" onclick="setTenor(15)" class="tenor-btn py-2 text-xs font-bold rounded-xl border border-slate-700 hover:border-brand-500 text-slate-300 transition text-center" data-years="15">15 Thn</button>
+                                <button type="button" onclick="setTenor(20)" class="tenor-btn py-2 text-xs font-bold rounded-xl border-brand-500 bg-brand-500 text-brand-900 font-extrabold transition text-center active" data-years="20">20 Thn</button>
+                                <button type="button" onclick="setTenor(25)" class="tenor-btn py-2 text-xs font-bold rounded-xl border border-slate-700 hover:border-brand-500 text-slate-300 transition text-center" data-years="25">25 Thn</button>
+                            </div>
+                        </div>
+
+                        <!-- Skema Explainer Note -->
+                        <div class="p-3.5 rounded-xl bg-slate-800/80 border border-slate-700 text-xs text-slate-300 flex items-start gap-2.5">
+                            <span class="text-base" id="schemeIcon">🕌</span>
+                            <div>
+                                <strong class="text-white block" id="schemeTitle">Akad Murabahah Syariah</strong>
+                                <span id="schemeDesc" class="text-slate-400 leading-relaxed">Cicilan pasti sama dari bulan pertama hingga tahun ke-20 lunas tanpa fluktuasi bunga pasar (tanpa floating rate).</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Output Card Result -->
+                    <div class="md:col-span-5 bg-slate-800/90 rounded-2xl p-6 border border-white/10 text-center flex flex-col justify-between h-full">
+                        <div>
+                            <span class="text-xs uppercase tracking-wider font-semibold text-slate-400 block" id="displayCicilanLabel">Estimasi Cicilan Flat Syariah:</span>
+                            <div id="displayCicilan" class="text-3xl sm:text-4xl font-black text-amber-300 my-2">
+                                Rp 2.784.000
+                            </div>
+                            <span class="text-xs text-emerald-400 font-semibold block mb-4" id="displayRateBadge">✓ Cicilan Flat Tetap Sampai Lunas</span>
+
+                            <div class="text-xs text-slate-300 space-y-1.5 bg-slate-900/60 p-3 rounded-xl border border-white/5 text-left mb-4">
+                                <div class="flex justify-between">
+                                    <span>Plafon Pembiayaan:</span>
+                                    <strong id="displayPlafon" class="text-white">Rp 405.000.000</strong>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Rekomendasi Bank:</span>
+                                    <span class="text-emerald-400 font-semibold" id="displayBankRec">BSI Syariah, BTN Syariah</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a id="btnKirimKPR" 
+                           href="https://wa.me/6281911590700?text=Halo%20Admin%20Sawangan%20Urban%20Homes,%20saya%20sudah%20coba%20hitung%20di%20kalkulator%20web%20dengan%20harga%20450jt%20skema%20Syariah.%20Boleh%20minta%20rekomendasi%20bank%20dan%20tabel%20cicilan%20resminya?"
+                           target="_blank"
+                           class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-emerald-500 to-wa-500 hover:from-emerald-600 hover:to-wa-600 text-white font-bold py-3.5 px-4 rounded-xl text-xs sm:text-sm shadow-md transition">
+                            <i data-lucide="send" class="w-4 h-4"></i>
+                            <span>Kirim Hasil Hitungan ke Sales (WA)</span>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- BANK PARTNERS & TRUST ASSURANCE (Item 4) -->
+            <div class="mt-12 pt-8 border-t border-slate-200">
+                <div class="text-center mb-6">
+                    <span class="text-xs font-bold text-slate-400 uppercase tracking-widest block">Mitra Perbankan & Asuransi KPR</span>
+                    <h3 class="text-lg font-bold text-slate-900 mt-1">Bekerjasama dengan Bank Nasional Terkemuka</h3>
+                </div>
+
+                <!-- Bank Chips -->
+                <div class="grid grid-cols-2 sm:grid-cols-5 gap-3 max-w-3xl mx-auto text-center">
+                    <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl hover:border-emerald-500 transition">
+                        <span class="font-extrabold text-sm text-emerald-800 block">BSI</span>
+                        <span class="text-[10px] text-slate-500">Bank Syariah Indonesia</span>
+                    </div>
+                    <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl hover:border-blue-500 transition">
+                        <span class="font-extrabold text-sm text-blue-900 block">MANDIRI</span>
+                        <span class="text-[10px] text-slate-500">Mandiri KPR</span>
+                    </div>
+                    <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl hover:border-blue-500 transition">
+                        <span class="font-extrabold text-sm text-blue-800 block">BTN</span>
+                        <span class="text-[10px] text-slate-500">BTN Konven & Syariah</span>
+                    </div>
+                    <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl hover:border-blue-600 transition">
+                        <span class="font-extrabold text-sm text-blue-700 block">BRI</span>
+                        <span class="text-[10px] text-slate-500">KPR BRI Prioritas</span>
+                    </div>
+                    <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl hover:border-blue-700 transition">
+                        <span class="font-extrabold text-sm text-blue-900 block">BCA</span>
+                        <span class="text-[10px] text-slate-500">KPR BCA Fix Promo</span>
+                    </div>
+                </div>
+
+                <!-- 4 Trust Badges -->
+                <div class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs text-slate-700 max-w-4xl mx-auto">
+                    <div class="flex items-center gap-2 p-2.5 rounded-xl bg-slate-50 border border-slate-200">
+                        <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+                        <span>Bantu Cek SLIK / BI Checking</span>
+                    </div>
+                    <div class="flex items-center gap-2 p-2.5 rounded-xl bg-slate-50 border border-slate-200">
+                        <i data-lucide="file-check" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+                        <span>Pendampingan Berkas s/d Akad</span>
+                    </div>
+                    <div class="flex items-center gap-2 p-2.5 rounded-xl bg-slate-50 border border-slate-200">
+                        <i data-lucide="wallet" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+                        <span>Bisa DP 0% Sesuai Profil</span>
+                    </div>
+                    <div class="flex items-center gap-2 p-2.5 rounded-xl bg-slate-50 border border-slate-200">
+                        <i data-lucide="lock" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+                        <span>Data Pembeli Aman 100%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DIGITAL BOOKING VOUCHER TICKET (Item 6) -->
+            <div class="mt-14 max-w-3xl mx-auto">
+                <div class="relative bg-gradient-to-r from-amber-500 via-brand-500 to-amber-600 rounded-3xl p-1 shadow-2xl">
+                    <div class="bg-slate-900 text-white rounded-[22px] p-6 sm:p-8 relative overflow-hidden">
+                        <!-- Perforated side notches -->
+                        <div class="absolute -left-3 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-white"></div>
+                        <div class="absolute -right-3 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-white"></div>
+
+                        <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+                            <div class="text-left space-y-2">
+                                <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-400/20 text-amber-300 text-xs font-bold uppercase tracking-wider border border-amber-400/30">
+                                    <i data-lucide="ticket" class="w-3.5 h-3.5"></i>
+                                    <span>VOUCHER VIP SURVEY</span>
+                                </div>
+                                <h3 class="text-xl sm:text-2xl font-black text-white">Paket Bonus Spesial Survey Bulan Ini</h3>
+                                <ul class="text-xs text-slate-300 space-y-1 pt-1">
+                                    <li class="flex items-center gap-1.5">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i>
+                                        <span>Free Kanopi Carport Besi Hollow Minimalis</span>
+                                    </li>
+                                    <li class="flex items-center gap-1.5">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i>
+                                        <span>Free Smart Digital Door Lock Pintu Utama</span>
+                                    </li>
+                                    <li class="flex items-center gap-1.5">
+                                        <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i>
+                                        <span>Subsidi Biaya KPR s/d 15 Juta + Free Biaya Notaris</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="text-center shrink-0 space-y-3 w-full sm:w-auto">
+                                <div class="p-3 bg-slate-800 rounded-xl border border-dashed border-amber-400/60 font-mono text-center">
+                                    <span class="text-[10px] text-slate-400 block uppercase">KODE VOUCHER</span>
+                                    <span class="text-lg font-black text-amber-300 tracking-wider">SUH-VIP2026</span>
+                                </div>
+                                <a href="https://wa.me/6281911590700?text=Halo%20Admin%20Sawangan%20Urban%20Homes,%20saya%20mau%20klaim%20Kupon%20VIP%20SUH-VIP2026%20(Free%20Kanopi,%20Smart%20Lock%20%26%20Subsidi%20KPR)%20dan%20jadwalkan%20survey%20lokasi." 
+                                   target="_blank"
+                                   class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-emerald-500 to-wa-500 hover:from-emerald-600 hover:to-wa-600 text-white font-extrabold text-xs sm:text-sm px-5 py-3 rounded-xl shadow-lg transition w-full">
+                                    <i data-lucide="gift" class="w-4 h-4"></i>
+                                    <span>Klaim Kupon via WhatsApp</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: AKSESIBILITAS & LOKASI NYATA -->
+    <section id="lokasi" class="py-16 sm:py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-brand-600 font-bold text-xs uppercase tracking-widest bg-brand-50 px-3 py-1.5 rounded-full border border-brand-200">Akses Lokasi Strategis</span>
+                    <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
+                        Akses Cepat Menuju Jakarta Selatan & Pusat Kota Depok
+                    </h2>
+                    <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                        Sawangan saat ini menjadi primadona hunian karena terhubung langsung dengan infrastruktur jalan tol utama. Berangkat kerja ke Jakarta tidak lagi memakan waktu berjam-jam.
+                    </p>
+
+                    <div class="space-y-4 pt-2">
+                        <!-- Akses 1 -->
+                        <div class="flex items-start gap-4 p-4 bg-white rounded-2xl border border-slate-200 shadow-sm">
+                            <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center font-bold shrink-0">
+                                <i data-lucide="car" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm sm:text-base">10 - 12 Menit ke Gerbang Tol Desari (Sawangan)</h4>
+                                <p class="text-xs text-slate-500 mt-0.5">Langsung terkoneksi ke Cilandak, TB Simatupang, dan pusat bisnis Jakarta Selatan.</p>
+                            </div>
+                        </div>
+
+                        <!-- Akses 2 -->
+                        <div class="flex items-start gap-4 p-4 bg-white rounded-2xl border border-slate-200 shadow-sm">
+                            <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold shrink-0">
+                                <i data-lucide="cross" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm sm:text-base">Hanya 5 Menit ke RSUD Kota Depok</h4>
+                                <p class="text-xs text-slate-500 mt-0.5">Fasilitas kesehatan rujukan lengkap sangat dekat dari gerbang cluster.</p>
+                            </div>
+                        </div>
+
+                        <!-- Akses 3 -->
+                        <div class="flex items-start gap-4 p-4 bg-white rounded-2xl border border-slate-200 shadow-sm">
+                            <div class="w-10 h-10 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center font-bold shrink-0">
+                                <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm sm:text-base">Dekat Kawasan Pendidikan & Duren Seribu</h4>
+                                <p class="text-xs text-slate-500 mt-0.5">Dikelilingi sekolah negeri unggulan, madrasah, dan sekolah Islam terpadu.</p>
+                            </div>
+                        </div>
+
+                        <!-- Akses 4 -->
+                        <div class="flex items-start gap-4 p-4 bg-white rounded-2xl border border-slate-200 shadow-sm">
+                            <div class="w-10 h-10 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center font-bold shrink-0">
+                                <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm sm:text-base">Dekat Pasar Parung & The Park Sawangan Mall</h4>
+                                <p class="text-xs text-slate-500 mt-0.5">Kebutuhan belanja harian maupun hiburan akhir pekan keluarga sangat terjangkau.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-2">
+                        <a href="https://wa.me/6281911590700?text=Halo%20Admin%20Sawangan%20Urban%20Homes,%20bisa%20minta%20shareloc%20Google%20Maps%20titik%20lokasi%20Jl.%20H.%20Jawi?" 
+                           target="_blank"
+                           class="inline-flex items-center gap-2 text-brand-600 hover:text-brand-700 font-bold text-sm">
+                            <i data-lucide="map" class="w-4 h-4"></i>
+                            <span>Minta Titik Shareloc Google Maps (Jl. H. Jawi) via WhatsApp →</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Side: Interactive Google Maps Embed & Navigation Button (Item 7) -->
+                <div class="lg:col-span-6 space-y-4">
+                    <div class="bg-gradient-to-br from-brand-900 to-slate-900 p-6 sm:p-8 rounded-3xl text-white shadow-2xl relative overflow-hidden text-left">
+                        <div class="flex items-center justify-between mb-4 pb-3 border-b border-white/10">
+                            <div class="flex items-center gap-2.5">
+                                <div class="w-9 h-9 rounded-xl bg-brand-500 text-brand-900 flex items-center justify-center font-bold">
+                                    <i data-lucide="map-pin" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-base font-bold text-white">Jl. H. Jawi, Sawangan, Depok</h4>
+                                    <span class="text-xs text-amber-300">Cluster Eksklusif 13 Unit — Akses Mobil Lega</span>
+                                </div>
+                            </div>
+                            <span class="px-2.5 py-1 bg-emerald-500/20 text-emerald-300 rounded-full text-[10px] font-bold uppercase">Google Maps Ready</span>
+                        </div>
+
+                        <!-- Embedded Interactive Google Map -->
+                        <div class="relative w-full aspect-[16/10] rounded-2xl overflow-hidden border border-white/15 shadow-inner mb-4">
+                            <iframe 
+                                title="Peta Lokasi Sawangan Urban Homes di Google Maps"
+                                src="https://maps.google.com/maps?q=Jl.+H.+Jawi,+Sawangan,+Kota+Depok&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                                width="100%" 
+                                height="100%" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade"
+                                class="w-full h-full filter contrast-105">
+                            </iframe>
+                        </div>
+
+                        <!-- Quick Times -->
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center text-xs pb-4">
+                            <div class="p-2 rounded-xl bg-white/10 border border-white/10">
+                                <span class="text-[10px] text-slate-400 block">RSUD Depok</span>
+                                <strong class="text-emerald-400 text-xs">~5 Menit</strong>
+                            </div>
+                            <div class="p-2 rounded-xl bg-white/10 border border-white/10">
+                                <span class="text-[10px] text-slate-400 block">Duren Seribu</span>
+                                <strong class="text-emerald-400 text-xs">~5 Menit</strong>
+                            </div>
+                            <div class="p-2 rounded-xl bg-white/10 border border-white/10">
+                                <span class="text-[10px] text-slate-400 block">Tol Desari</span>
+                                <strong class="text-amber-300 text-xs">~12 Menit</strong>
+                            </div>
+                            <div class="p-2 rounded-xl bg-white/10 border border-white/10">
+                                <span class="text-[10px] text-slate-400 block">The Park Mall</span>
+                                <strong class="text-amber-300 text-xs">~12 Menit</strong>
+                            </div>
+                        </div>
+
+                        <!-- 1-Click Navigation Primary CTA -->
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=Jl.+H.+Jawi+Sawangan+Depok" 
+                           target="_blank"
+                           class="inline-flex items-center justify-center gap-2 w-full bg-amber-400 hover:bg-amber-300 text-brand-900 font-extrabold py-3.5 px-5 rounded-xl text-xs sm:text-sm shadow-lg transition">
+                            <i data-lucide="navigation" class="w-4 h-4"></i>
+                            <span>Buka Rute dari Lokasi Anda di Google Maps (1-Klik)</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: CUSTOMER STORIES / EMOTIONAL SOCIAL PROOF (Item 5) -->
+    <section id="testimoni" class="py-16 sm:py-24 bg-white border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="text-brand-600 font-bold text-xs uppercase tracking-widest bg-brand-50 px-3 py-1.5 rounded-full border border-brand-200">Cerita Pembeli</span>
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-3">
+                    Mengapa Mereka Memilih Sawangan Urban Homes?
+                </h2>
+                <p class="text-slate-600 mt-3 text-base">
+                    Keputusan besar keluarga berawal dari survey yang jujur dan perhitungan finansial yang masuk akal.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <!-- Story 1: Pasangan Commuter Jaksel -->
+                <div class="bg-slate-50 p-7 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between hover:shadow-md transition">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <span class="text-xs font-bold text-slate-500 ml-1">5.0</span>
+                        </div>
+                        <h4 class="font-bold text-slate-900 text-base mb-2">"Daripada sewa 3,5 jt di Jaksel menguap, sekarang cicil rumah 2 lantai sendiri."</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-6">
+                            "Kantor kami di TB Simatupang. Tiap hari lewat Tol Desari cuma sekitar 15-20 menit. Plafon void tingginya bikin rumah adem banget walaupun siang hari tanpa AC terus-menerus."
+                        </p>
+                    </div>
+
+                    <div class="pt-4 border-t border-slate-200 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-brand-900 text-brand-500 font-bold flex items-center justify-center text-sm">
+                            RS
+                        </div>
+                        <div>
+                            <span class="font-bold text-slate-900 text-xs block">Reza & Sarah (29 thn)</span>
+                            <span class="text-[11px] text-slate-500">Penghuni Rumah 2 Lt — Blok A3</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Story 2: Pembeli Kavling SHM -->
+                <div class="bg-slate-50 p-7 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between hover:shadow-md transition">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <span class="text-xs font-bold text-slate-500 ml-1">5.0</span>
+                        </div>
+                        <h4 class="font-bold text-slate-900 text-base mb-2">"Ambil kavling 66m² cuma 280 Jt, surat SHM sudah pecah & aman."</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-6">
+                            "Sebagai wiraswasta, saya amankan tanahnya dulu sebelum harga tanah di Sawangan makin melonjak. Gratis biaya notaris dan pajaknya beneran ditepati sama Nufist Realty tanpa biaya siluman."
+                        </p>
+                    </div>
+
+                    <div class="pt-4 border-t border-slate-200 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-emerald-700 text-white font-bold flex items-center justify-center text-sm">
+                            HG
+                        </div>
+                        <div>
+                            <span class="font-bold text-slate-900 text-xs block">Bpk. Hendra Gunawan (35 thn)</span>
+                            <span class="text-[11px] text-slate-500">Pembeli Kavling SHM 66m² — Blok A5</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Story 3: KPR Syariah Approval -->
+                <div class="bg-slate-50 p-7 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between hover:shadow-md transition">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-400 mb-4">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <span class="text-xs font-bold text-slate-500 ml-1">5.0</span>
+                        </div>
+                        <h4 class="font-bold text-slate-900 text-base mb-2">"Dibantu tim marketing sampai KPR BSI Syariah lolos disetujui."</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-6">
+                            "Awalnya khawatir soal berkas KPR karena baru menikah. Tapi tim Nufist Realty mendampingi dari awal sampai akad. Lingkungan clusternya tenang dan one gate aman buat anak."
+                        </p>
+                    </div>
+
+                    <div class="pt-4 border-t border-slate-200 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-brand-800 text-amber-300 font-bold flex items-center justify-center text-sm">
+                            DA
+                        </div>
+                        <div>
+                            <span class="font-bold text-slate-900 text-xs block">Ibu Dita & Suami</span>
+                            <span class="text-[11px] text-slate-500">Penghuni Rumah 2 Lt — Blok A2</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 7: FAQ (Jawaban Jujur Atas Keraguan Calon Pembeli) -->
+    <section class="py-16 sm:py-24 bg-white border-b border-slate-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14">
+                <span class="text-brand-600 font-bold text-xs uppercase tracking-widest bg-brand-50 px-3 py-1.5 rounded-full border border-brand-200">Pertanyaan Populer</span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mt-3">
+                    Hal-Hal yang Sering Ditanyakan Calon Pembeli
+                </h2>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200/80">
+                    <h4 class="font-bold text-base text-slate-900 flex items-center justify-between gap-4">
+                        <span>Bagaimana status legalitas tanah dan bangunannya?</span>
+                        <i data-lucide="shield" class="w-5 h-5 text-emerald-600 shrink-0"></i>
+                    </h4>
+                    <p class="text-sm text-slate-600 mt-2 leading-relaxed">
+                        Sangat aman. Legalitas sudah <strong>Sertifikat Hak Milik (SHM)</strong> dan Persetujuan Bangunan Gedung (PBG) sudah pecah per kavling, bukan sertifikat induk yang belum dibagi. Anda bisa mengecek langsung berkas legalitas saat survey lokasi.
+                    </p>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200/80">
+                    <h4 class="font-bold text-base text-slate-900 flex items-center justify-between gap-4">
+                        <span>Apakah bisa KPR dan bank mana saja yang bekerja sama?</span>
+                        <i data-lucide="credit-card" class="w-5 h-5 text-brand-600 shrink-0"></i>
+                    </h4>
+                    <p class="text-sm text-slate-600 mt-2 leading-relaxed">
+                        Bisa. Kami bekerjasama dengan bank-bank nasional terkemuka baik konvensional maupun syariah (BSI, Mandiri, BTN, BRI, BCA). Tim marketing kami akan membantu mendampingi proses pemberkasan KPR Anda dari awal hingga akad kredit disetujui.
+                    </p>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200/80">
+                    <h4 class="font-bold text-base text-slate-900 flex items-center justify-between gap-4">
+                        <span>Jika membeli Kavling 280 Juta, apakah ada batasan waktu membangun?</span>
+                        <i data-lucide="calendar-clock" class="w-5 h-5 text-amber-600 shrink-0"></i>
+                    </h4>
+                    <p class="text-sm text-slate-600 mt-2 leading-relaxed">
+                        Tidak ada batas waktu. Anda bisa membeli kavlingnya sekarang untuk mengunci harga tanah sebelum naik, lalu membangun rumahnya di kemudian hari saat dana Anda sudah terkumpul sesuai desain impian Anda.
+                    </p>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200/80">
+                    <h4 class="font-bold text-base text-slate-900 flex items-center justify-between gap-4">
+                        <span>Bagaimana cara memesan jadwal survey ke lokasi?</span>
+                        <i data-lucide="clock" class="w-5 h-5 text-wa-600 shrink-0"></i>
+                    </h4>
+                    <p class="text-sm text-slate-600 mt-2 leading-relaxed">
+                        Cukup klik tombol WhatsApp di halaman ini atau isi formulir survey. Tim kami buka setiap hari (Senin s/d Minggu, pukul 08.00 - 18.00 WIB) untuk menemani Anda melihat langsung fisik bangunan dan lingkungan cluster.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 8: FINAL ACTION SECTION -->
+    <section id="promo" class="py-16 sm:py-20 bg-gradient-to-br from-brand-900 via-slate-900 to-brand-900 text-white text-center relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-6">
+            <span class="inline-block px-3.5 py-1.5 rounded-full bg-amber-400/20 text-amber-300 text-xs font-bold uppercase tracking-wider border border-amber-400/30">
+                Unit Eksklusif Terbatas
+            </span>
+            
+            <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight max-w-2xl mx-auto">
+                Jangan Biarkan Rumah Impian Keluarga Anda Diambil Pembeli Lain.
+            </h2>
+            
+            <p class="text-slate-300 text-sm sm:text-base max-w-xl mx-auto">
+                Dapatkan promo <strong>Free Biaya Pajak & Notaris</strong> dan pilih posisi unit kavling terbaik sebelum kehabisan.
+            </p>
+
+            <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <button onclick="openSurveyModal()" 
+                        class="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-emerald-500 to-wa-500 hover:from-emerald-600 hover:to-wa-600 text-white font-extrabold px-8 py-4 rounded-xl shadow-xl shadow-emerald-500/25 transition text-base w-full sm:w-auto">
+                    <i data-lucide="message-circle" class="w-5 h-5"></i>
+                    <span>Hubungi Sales via WhatsApp (0819 1159 0700)</span>
+                </button>
+            </div>
+
+            <div class="pt-6 text-xs text-slate-400">
+                *Syarat dan ketentuan promo berlaku. Hubungi tim marketing untuk detail resmi.
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-900 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-brand-900 text-brand-500 flex items-center justify-center font-bold">
+                    <i data-lucide="home" class="w-4 h-4 text-brand-500"></i>
+                </div>
+                <div>
+                    <span class="text-sm font-bold text-white block">SAWANGAN URBAN HOMES</span>
+                    <span>Hunian Nyaman, Aman & Strategis untuk Keluarga</span>
+                </div>
+            </div>
+
+            <div class="text-center md:text-right">
+                <p>© 2026 Sawangan Urban Homes. Developed by <strong>NUFIST REALTY</strong>.</p>
+                <p class="mt-1 text-slate-400">Jl. H. Jawi, Sawangan, Kota Depok, Jawa Barat</p>
+                <p class="mt-1 text-amber-300 font-mono">Hotline: 0819 1159 0700 / 0812 8279 3135</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP BUTTON (Responsive Desktop & Mobile) -->
+    <div id="floatingWaContainer" class="fixed bottom-20 right-4 sm:bottom-8 sm:right-8 z-50 flex items-center gap-3">
+        <!-- Floating Speech Bubble / Tooltip (Desktop) -->
+        <a href="https://wa.me/6281911590700?text=Halo%20Admin%20Sawangan%20Urban%20Homes,%20saya%20mau%20tanya%20pricelist%20dan%20jadwal%20survey%20lokasi." 
+           target="_blank"
+           class="group hidden sm:flex items-center gap-2 bg-white text-slate-800 text-xs font-bold py-2.5 px-4 rounded-2xl shadow-xl border border-slate-200/90 hover:border-wa-500 transition duration-300 transform hover:-translate-x-1">
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span>Online! Butuh info & survey? <strong class="text-emerald-700">Chat Sales</strong></span>
+        </a>
+
+        <!-- Floating Button Circle -->
+        <a href="https://wa.me/6281911590700?text=Halo%20Admin%20Sawangan%20Urban%20Homes,%20saya%20mau%20tanya%20pricelist%20dan%20jadwal%20survey%20lokasi." 
+           target="_blank"
+           aria-label="Chat WhatsApp Sales Sawangan Urban Homes"
+           class="relative group w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-tr from-emerald-600 via-wa-500 to-emerald-500 text-white flex items-center justify-center shadow-2xl shadow-emerald-500/40 hover:shadow-emerald-500/60 transform hover:scale-105 active:scale-95 transition-all duration-300">
+            <!-- Pulsing Radar Wave -->
+            <span class="absolute inset-0 rounded-full bg-emerald-500 animate-ping opacity-30 pointer-events-none"></span>
+            
+            <!-- WhatsApp Official Vector Icon -->
+            <svg class="w-7 h-7 sm:w-8 sm:h-8 fill-current relative z-10" viewBox="0 0 24 24">
+                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+            </svg>
+            
+            <!-- Online status green dot badge -->
+            <span class="absolute top-0 right-0 w-4 h-4 bg-emerald-400 border-2 border-white rounded-full"></span>
+        </a>
+    </div>
+
+    <!-- STICKY BOTTOM BAR (Mobile CRO Machine) -->
+    <div class="fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200 px-4 py-3 sm:hidden shadow-lg">
+        <div class="flex items-center justify-between gap-3">
+            <div>
+                <span class="text-[10px] text-slate-500 block uppercase font-bold">Harga Promo Mulai</span>
+                <span class="text-base font-extrabold text-brand-900">Rp 280 Jt - 450 Jt-an</span>
+            </div>
+            <button onclick="openSurveyModal()" 
+                    class="inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-xs px-4 py-2.5 rounded-xl shadow-md active:scale-95 transition">
+                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                <span>Survey via WA</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- RECENT ACTIVITY SOCIAL PROOF TOAST -->
+    <div id="socialProofToast" class="fixed bottom-24 sm:bottom-8 left-4 z-40 bg-white/95 backdrop-blur-md border border-slate-200 shadow-xl rounded-2xl p-3.5 max-w-xs transition duration-500 transform translate-y-24 opacity-0 pointer-events-none flex items-center gap-3">
+        <div class="w-9 h-9 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
+            <i data-lucide="bell" class="w-4 h-4"></i>
+        </div>
+        <div class="text-xs">
+            <span class="font-bold text-slate-900 block" id="toastName">Pak Hendra (Jaksel)</span>
+            <span class="text-slate-500 block text-[11px]" id="toastAction">Baru saja jadwalkan survey lokasi untuk Sabtu ini.</span>
+        </div>
+        <button onclick="hideSocialProofToast()" class="text-slate-400 hover:text-slate-600 ml-1">
+            <i data-lucide="x" class="w-3.5 h-3.5"></i>
+        </button>
+    </div>
+
+    <!-- MODAL: LEAD QUALIFICATION / SURVEY BOOKING -->
+    <div id="surveyModal" class="fixed inset-0 z-50 bg-slate-950/70 backdrop-blur-sm flex items-center justify-center p-4 opacity-0 invisible pointer-events-none transition-all duration-300">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative border border-slate-100 transform transition-transform duration-300 scale-95" id="surveyModalCard">
+            <!-- Close Button -->
+            <button onclick="closeSurveyModal()" class="absolute top-5 right-5 text-slate-400 hover:text-slate-600 p-1.5 rounded-full hover:bg-slate-100 transition">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+
+            <div class="text-left mb-6">
+                <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 text-xs font-bold mb-2">
+                    <i data-lucide="sparkles" class="w-3.5 h-3.5 text-amber-600"></i>
+                    <span>Klaim Promo Free Pajak & Notaris</span>
+                </div>
+                <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900">Jadwalkan Survey & Cek Promo</h3>
+                <p class="text-xs sm:text-sm text-slate-500 mt-1">Lengkapi 3 data ringkas di bawah agar sales kami menyiapkan berkas dan pricelist terbaru saat Anda datang:</p>
+            </div>
+
+            <form onsubmit="handleSurveySubmit(event)" class="space-y-4 text-left">
+                <!-- Field 1: Pilihan Produk -->
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Tipe yang Diminati:</label>
+                    <select id="modalProduct" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-sm font-semibold text-slate-800 focus:outline-none focus:border-brand-500">
+                        <option value="Rumah Modern 2 Lantai Siap Huni (Mulai 450 Jt)">Rumah Modern 2 Lantai Siap Huni (Mulai 450 Jt)</option>
+                        <option value="Kavling Siap Bangun SHM 66m² (Hanya 280 Juta)">Kavling Siap Bangun SHM 66m² (Hanya 280 Juta)</option>
+                        <option value="Konsultasi Keduanya / Mau Bandingkan">Konsultasi Keduanya / Mau Bandingkan</option>
+                    </select>
+                </div>
+
+                <!-- Field 2: Skema Bayar -->
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Rencana Pembayaran:</label>
+                    <div class="grid grid-cols-2 gap-2 text-xs">
+                        <label class="flex items-center gap-2 p-2.5 rounded-xl border border-slate-200 bg-slate-50 cursor-pointer hover:border-brand-500 transition">
+                            <input type="radio" name="paymentScheme" value="KPR Syariah (Flat Murabahah)" checked class="accent-brand-500">
+                            <span class="font-semibold text-slate-800">KPR Syariah (Flat)</span>
+                        </label>
+                        <label class="flex items-center gap-2 p-2.5 rounded-xl border border-slate-200 bg-slate-50 cursor-pointer hover:border-brand-500 transition">
+                            <input type="radio" name="paymentScheme" value="KPR Konvensional / Cash" class="accent-brand-500">
+                            <span class="font-semibold text-slate-800">KPR Konven / Cash</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Field 3: Slot Picker Booking Survey (Item 3) -->
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Pilih Hari Survey:</label>
+                    <div class="grid grid-cols-3 gap-2 text-xs mb-2">
+                        <button type="button" onclick="selectSurveyDay('Sabtu Ini', this)" class="survey-day-btn p-2 rounded-xl border border-brand-500 bg-brand-50 font-bold text-brand-900 text-center active">
+                            Sabtu Ini
+                        </button>
+                        <button type="button" onclick="selectSurveyDay('Minggu Ini', this)" class="survey-day-btn p-2 rounded-xl border border-slate-200 bg-slate-50 text-slate-700 text-center hover:border-brand-500">
+                            Minggu Ini
+                        </button>
+                        <button type="button" onclick="selectSurveyDay('Hari Kerja', this)" class="survey-day-btn p-2 rounded-xl border border-slate-200 bg-slate-50 text-slate-700 text-center hover:border-brand-500">
+                            Hari Kerja
+                        </button>
+                    </div>
+
+                    <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Pilih Sesi Jam Kunjungan:</label>
+                    <div class="grid grid-cols-3 gap-2 text-xs">
+                        <button type="button" onclick="selectSurveyTime('Pagi (09:00 - 12:00)', this)" class="survey-time-btn p-2 rounded-xl border border-brand-500 bg-brand-50 font-bold text-brand-900 text-center active">
+                            Pagi (09-12)
+                        </button>
+                        <button type="button" onclick="selectSurveyTime('Siang (13:00 - 15:00)', this)" class="survey-time-btn p-2 rounded-xl border border-slate-200 bg-slate-50 text-slate-700 text-center hover:border-brand-500">
+                            Siang (13-15)
+                        </button>
+                        <button type="button" onclick="selectSurveyTime('Sore (15:30 - 17:30)', this)" class="survey-time-btn p-2 rounded-xl border border-slate-200 bg-slate-50 text-slate-700 text-center hover:border-brand-500">
+                            Sore (15:30-17:30)
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Field 4: Nama Pemesan -->
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Nama Anda:</label>
+                    <input type="text" id="modalCustomerName" placeholder="Contoh: Bpk/Ibu Reza" required 
+                           class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-sm text-slate-800 focus:outline-none focus:border-brand-500">
+                </div>
+
+                <div class="pt-2">
+                    <button type="submit" 
+                            class="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-emerald-500 to-wa-500 hover:from-emerald-600 hover:to-wa-600 text-white font-extrabold py-3.5 px-6 rounded-xl shadow-lg shadow-emerald-500/25 transition text-sm">
+                        <i data-lucide="calendar-check" class="w-4 h-4"></i>
+                        <span>Konfirmasi Booking Survey ke WhatsApp</span>
+                    </button>
+                    <span class="text-[11px] text-slate-400 text-center block mt-2">🔒 Bebas biaya konsultasi, tim marketing siap menyambut Anda di lokasi.</span>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- MODAL: IMAGE LIGHTBOX -->
+    <div id="imageLightbox" class="fixed inset-0 z-50 bg-slate-950/90 backdrop-blur-md flex items-center justify-center p-4 opacity-0 invisible pointer-events-none transition-all duration-300" onclick="closeLightbox()">
+        <div class="relative max-w-4xl w-full text-center" onclick="event.stopPropagation()">
+            <button onclick="closeLightbox()" class="absolute -top-12 right-0 text-white hover:text-amber-400 p-2">
+                <i data-lucide="x" class="w-7 h-7"></i>
+            </button>
+            <img id="lightboxImg" src="" alt="Detail Foto Sawangan Urban Homes" class="max-h-[80vh] w-auto mx-auto rounded-2xl shadow-2xl object-contain border border-white/20">
+            <p id="lightboxCaption" class="text-sm font-semibold text-slate-200 mt-4 px-4"></p>
+        </div>
+    </div>
+
+    <!-- MODAL: EXIT INTENT POPUP (Item 1: Penyelamat Pengunjung yang Mau Bounce) -->
+    <div id="exitIntentModal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-4 opacity-0 invisible pointer-events-none transition-all duration-300">
+        <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl relative border-2 border-brand-500/50 text-center transform transition-transform duration-300 scale-95" id="exitIntentCard">
+            <!-- Close Button -->
+            <button onclick="closeExitModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 p-1.5 rounded-full hover:bg-slate-100 transition">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+
+            <!-- Urgency Badge -->
+            <div class="w-14 h-14 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center font-bold mx-auto mb-4 shadow-sm">
+                <i data-lucide="clock" class="w-7 h-7 text-amber-600 animate-pulse"></i>
+            </div>
+
+            <span class="inline-block px-3 py-1 rounded-full bg-amber-100 text-amber-900 text-xs font-extrabold uppercase tracking-wider mb-2">
+                Tunggu Sebentar! ⏳
+            </span>
+
+            <h3 class="text-xl sm:text-2xl font-black text-slate-900 leading-snug">
+                Jangan Tinggalkan Halaman Tanpa Mengamankan Promo Ini!
+            </h3>
+
+            <p class="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
+                Klaim <strong>Kupon Subsidi DP s/d Rp 10 Juta</strong> + dapatkan <strong>E-Brochure PDF & Pricelist 13 Kavling A1-A13</strong> langsung ke WhatsApp Anda sekarang.
+            </p>
+
+            <div class="my-4 p-3.5 bg-slate-50 rounded-2xl border border-dashed border-amber-500/70 text-left space-y-1.5 text-xs text-slate-700">
+                <div class="flex items-center gap-2">
+                    <i data-lucide="check-circle" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+                    <span>Free Kanopi Carport & Smart Door Lock</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i data-lucide="check-circle" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+                    <span>Free Biaya Pajak & Balik Nama Notaris (SHM)</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i data-lucide="check-circle" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+                    <span>Tersisa Hanya 13 Unit di Jl. H. Jawi</span>
+                </div>
+            </div>
+
+            <div class="space-y-2 pt-2">
+                <a href="https://wa.me/6281911590700?text=Halo%20Admin%20Sawangan%20Urban%20Homes,%20saya%20tertarik%20klaim%20Voucher%20Subsidi%20DP%20dan%20minta%20E-Brochure%20Pricelist%2013%20Kavling%20Jl.%20H.%20Jawi." 
+                   target="_blank"
+                   onclick="closeExitModal()"
+                   class="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-emerald-500 to-wa-500 hover:from-emerald-600 hover:to-wa-600 text-white font-extrabold py-3.5 px-6 rounded-xl shadow-lg shadow-emerald-500/25 transition text-sm">
+                    <i data-lucide="gift" class="w-4 h-4"></i>
+                    <span>Ambil Voucher & Brosur Lengkap (Gratis)</span>
+                </a>
+                <button onclick="closeExitModal()" class="text-xs text-slate-400 hover:text-slate-600 underline pt-1 block mx-auto">
+                    Nanti saja, saya ingin melihat halaman lagi
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script for Lucide Icons, Sliders, KPR Calculator & Modals -->
+    <script>
+        // Init Lucide Icons
+        lucide.createIcons();
+
+        // 1. Interactive Before-After Slider Implementation
+        function initBeforeAfterSlider(containerId) {
+            const container = document.getElementById(containerId);
+            if (!container) return;
+
+            const resizeDiv = container.querySelector('.resize');
+            const handle = container.querySelector('.handle');
+
+            let isDragging = false;
+
+            function updatePosition(clientX) {
+                const rect = container.getBoundingClientRect();
+                let x = clientX - rect.left;
+                if (x < 0) x = 0;
+                if (x > rect.width) x = rect.width;
+                const percentage = (x / rect.width) * 100;
+                resizeDiv.style.width = percentage + '%';
+                handle.style.left = percentage + '%';
+            }
+
+            container.addEventListener('mousedown', (e) => {
+                isDragging = true;
+                updatePosition(e.clientX);
+            });
+
+            window.addEventListener('mouseup', () => { isDragging = false; });
+            window.addEventListener('mousemove', (e) => {
+                if (!isDragging) return;
+                updatePosition(e.clientX);
+            });
+
+            // Touch events for mobile phones
+            container.addEventListener('touchstart', (e) => {
+                isDragging = true;
+                updatePosition(e.touches[0].clientX);
+            }, { passive: true });
+
+            window.addEventListener('touchend', () => { isDragging = false; });
+            window.addEventListener('touchmove', (e) => {
+                if (!isDragging) return;
+                updatePosition(e.touches[0].clientX);
+            }, { passive: true });
+        }
+
+        initBeforeAfterSlider('sliderDining');
+        initBeforeAfterSlider('sliderBackyard');
+
+        // 2. Countdown Timer Logic
+        function startCountdown() {
+            // Target: 2 days, 14 hours from now
+            let totalSeconds = (2 * 24 * 3600) + (14 * 3600) + (32 * 60) + 45;
+            const timerEl = document.getElementById('countdownTimer');
+            if (!timerEl) return;
+
+            setInterval(() => {
+                if (totalSeconds <= 0) {
+                    totalSeconds = 2 * 24 * 3600; // Reset
+                }
+                totalSeconds--;
+
+                const days = Math.floor(totalSeconds / (24 * 3600));
+                const hours = Math.floor((totalSeconds % (24 * 3600)) / 3600);
+                const minutes = Math.floor((totalSeconds % 3600) / 60);
+                const seconds = totalSeconds % 60;
+
+                const pad = (n) => n.toString().padStart(2, '0');
+                timerEl.textContent = `${pad(days)} Hari : ${pad(hours)} Jam : ${pad(minutes)} Mnt : ${pad(seconds)} Dtk`;
+            }, 1000);
+        }
+        startCountdown();
+
+        // 3. Social Proof Toast Generator (Runs every 18 seconds)
+        const sampleLeads = [
+            { name: "Pak Hendra (Jaksel)", action: "Baru saja jadwalkan survey lokasi untuk Sabtu ini." },
+            { name: "Ibu Desi (Depok)", action: "Mengklaim promo Free Biaya Notaris untuk Kavling 280 Jt." },
+            { name: "Bpk. Randy (Tangsel)", action: "Mengajukan simulasi KPR Rumah 2 Lantai Blok A." },
+            { name: "Ibu Maya (Jakarta)", action: "Menanyakan ketersediaan Kavling SHM 66m²." }
+        ];
+        let leadIndex = 0;
+
+        function showSocialProofToast() {
+            const toast = document.getElementById('socialProofToast');
+            const nameEl = document.getElementById('toastName');
+            const actionEl = document.getElementById('toastAction');
+            if (!toast || !nameEl || !actionEl) return;
+
+            const lead = sampleLeads[leadIndex % sampleLeads.length];
+            nameEl.textContent = lead.name;
+            actionEl.textContent = lead.action;
+            leadIndex++;
+
+            toast.classList.remove('translate-y-24', 'opacity-0', 'pointer-events-none');
+            toast.classList.add('translate-y-0', 'opacity-100');
+
+            setTimeout(() => {
+                hideSocialProofToast();
+            }, 5500);
+        }
+
+        function hideSocialProofToast() {
+            const toast = document.getElementById('socialProofToast');
+            if (!toast) return;
+            toast.classList.add('translate-y-24', 'opacity-0', 'pointer-events-none');
+            toast.classList.remove('translate-y-0', 'opacity-100');
+        }
+
+        setTimeout(() => {
+            showSocialProofToast();
+            setInterval(showSocialProofToast, 20000);
+        }, 5000);
+
+        // 4. Modal Functions (Survey & Lightbox)
+        let selectedSurveyDay = 'Sabtu Ini';
+        let selectedSurveyTime = 'Pagi (09:00 - 12:00)';
+
+        function selectSurveyDay(day, btn) {
+            selectedSurveyDay = day;
+            document.querySelectorAll('.survey-day-btn').forEach(b => {
+                b.classList.remove('border-brand-500', 'bg-brand-50', 'font-bold', 'text-brand-900', 'active');
+                b.classList.add('border-slate-200', 'bg-slate-50', 'text-slate-700');
+            });
+            btn.classList.add('border-brand-500', 'bg-brand-50', 'font-bold', 'text-brand-900', 'active');
+            btn.classList.remove('border-slate-200', 'bg-slate-50', 'text-slate-700');
+        }
+
+        function selectSurveyTime(time, btn) {
+            selectedSurveyTime = time;
+            document.querySelectorAll('.survey-time-btn').forEach(b => {
+                b.classList.remove('border-brand-500', 'bg-brand-50', 'font-bold', 'text-brand-900', 'active');
+                b.classList.add('border-slate-200', 'bg-slate-50', 'text-slate-700');
+            });
+            btn.classList.add('border-brand-500', 'bg-brand-50', 'font-bold', 'text-brand-900', 'active');
+            btn.classList.remove('border-slate-200', 'bg-slate-50', 'text-slate-700');
+        }
+
+        function openSurveyModal(preselectedProduct = null) {
+            const modal = document.getElementById('surveyModal');
+            const card = document.getElementById('surveyModalCard');
+            if (preselectedProduct) {
+                const selectEl = document.getElementById('modalProduct');
+                if (selectEl) {
+                    for (let i = 0; i < selectEl.options.length; i++) {
+                        if (selectEl.options[i].value.includes(preselectedProduct)) {
+                            selectEl.selectedIndex = i;
+                            break;
+                        }
+                    }
+                }
+            }
+            modal.classList.add('modal-active');
+            card.classList.remove('scale-95');
+            card.classList.add('scale-100');
+        }
+
+        function closeSurveyModal() {
+            const modal = document.getElementById('surveyModal');
+            const card = document.getElementById('surveyModalCard');
+            modal.classList.remove('modal-active');
+            card.classList.remove('scale-100');
+            card.classList.add('scale-95');
+        }
+
+        function handleSurveySubmit(e) {
+            e.preventDefault();
+            const product = document.getElementById('modalProduct').value;
+            const payment = document.querySelector('input[name="paymentScheme"]:checked')?.value || 'KPR Syariah';
+            const name = document.getElementById('modalCustomerName').value.trim();
+
+            const text = `Halo Admin Sawangan Urban Homes, saya ${name}.\nSaya ingin survey lokasi dan konsultasi:\n- Unit: ${product}\n- Rencana Bayar: ${payment}\n- Hari Survey: ${selectedSurveyDay}\n- Sesi Jam: ${selectedSurveyTime}\n- Kode Kupon VIP: SUH-VIP2026\n\nApakah promo Free Pajak & Notaris masih berlaku? Boleh minta shareloc Google Maps titik Jl. H. Jawi?`;
+
+            closeSurveyModal();
+            window.open(`https://wa.me/6281911590700?text=${encodeURIComponent(text)}`, '_blank');
+        }
+
+        function openLightbox(src, caption) {
+            const lightbox = document.getElementById('imageLightbox');
+            const img = document.getElementById('lightboxImg');
+            const cap = document.getElementById('lightboxCaption');
+            img.src = src;
+            cap.textContent = caption || '';
+            lightbox.classList.add('modal-active');
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('imageLightbox');
+            lightbox.classList.remove('modal-active');
+        }
+
+        // Exit-Intent Modal Functions (Item 1)
+        function openExitModal() {
+            const modal = document.getElementById('exitIntentModal');
+            const card = document.getElementById('exitIntentCard');
+            if (!modal || !card) return;
+            modal.classList.add('modal-active');
+            card.classList.remove('scale-95');
+            card.classList.add('scale-100');
+            sessionStorage.setItem('exitModalTriggered', 'true');
+        }
+
+        function closeExitModal() {
+            const modal = document.getElementById('exitIntentModal');
+            const card = document.getElementById('exitIntentCard');
+            if (!modal || !card) return;
+            modal.classList.remove('modal-active');
+            card.classList.remove('scale-100');
+            card.classList.add('scale-95');
+        }
+
+        // Trigger Exit Intent on Desktop
+        let exitTriggered = false;
+        document.addEventListener('mouseleave', function(e) {
+            if (e.clientY <= 0 && !exitTriggered && !sessionStorage.getItem('exitModalTriggered')) {
+                exitTriggered = true;
+                openExitModal();
+            }
+        });
+
+        // Trigger Exit Intent on Mobile (after 25s when scrolling back up)
+        let lastScrollY = window.scrollY;
+        let pageStartTime = Date.now();
+        window.addEventListener('scroll', function() {
+            const currentScrollY = window.scrollY;
+            const timeElapsed = (Date.now() - pageStartTime) / 1000;
+            if (timeElapsed > 25 && lastScrollY - currentScrollY > 150 && currentScrollY < 400 && !exitTriggered && !sessionStorage.getItem('exitModalTriggered')) {
+                exitTriggered = true;
+                openExitModal();
+            }
+            lastScrollY = currentScrollY;
+        }, { passive: true });
+
+        // 5. KPR Calculator Logic (Syariah & Konvensional Dual Mode - Item 2)
+        const inputHarga = document.getElementById('inputHarga');
+        const inputDP = document.getElementById('inputDP');
+        const displayHarga = document.getElementById('displayHarga');
+        const displayDP = document.getElementById('displayDP');
+        const displayPlafon = document.getElementById('displayPlafon');
+        const displayCicilan = document.getElementById('displayCicilan');
+        const displayCicilanLabel = document.getElementById('displayCicilanLabel');
+        const displayRateBadge = document.getElementById('displayRateBadge');
+        const displayBankRec = document.getElementById('displayBankRec');
+        const schemeTitle = document.getElementById('schemeTitle');
+        const schemeDesc = document.getElementById('schemeDesc');
+        const schemeIcon = document.getElementById('schemeIcon');
+        const btnKirimKPR = document.getElementById('btnKirimKPR');
+        const tenorButtons = document.querySelectorAll('.tenor-btn');
+
+        let currentTenor = 20; // Default 20 tahun
+        let currentScheme = 'syariah'; // 'syariah' or 'konven'
+
+        function formatRupiah(num) {
+            return 'Rp ' + Math.round(num).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+        }
+
+        function setKprScheme(scheme) {
+            currentScheme = scheme;
+            const tabSyariah = document.getElementById('tabKprSyariah');
+            const tabKonven = document.getElementById('tabKprKonven');
+
+            if (scheme === 'syariah') {
+                tabSyariah.classList.add('bg-emerald-700', 'text-white', 'shadow-md');
+                tabSyariah.classList.remove('text-slate-600');
+                tabKonven.classList.remove('bg-emerald-700', 'text-white', 'shadow-md', 'bg-brand-900');
+                tabKonven.classList.add('text-slate-600');
+
+                displayCicilanLabel.textContent = "Estimasi Cicilan Flat Syariah:";
+                displayRateBadge.textContent = "✓ Cicilan Flat Tetap Sampai Lunas (Murabahah)";
+                displayRateBadge.classList.add('text-emerald-400');
+                displayRateBadge.classList.remove('text-amber-300');
+                displayBankRec.textContent = "BSI Syariah, BTN Syariah";
+                schemeIcon.textContent = "🕌";
+                schemeTitle.textContent = "Akad Murabahah Syariah";
+                schemeDesc.textContent = "Cicilan pasti sama dari bulan pertama hingga tahun ke-20 lunas tanpa fluktuasi bunga pasar (tanpa floating rate).";
+            } else {
+                tabKonven.classList.add('bg-brand-900', 'text-white', 'shadow-md');
+                tabKonven.classList.remove('text-slate-600');
+                tabSyariah.classList.remove('bg-emerald-700', 'text-white', 'shadow-md');
+                tabSyariah.classList.add('text-slate-600');
+
+                displayCicilanLabel.textContent = "Estimasi Cicilan KPR Konvensional:";
+                displayRateBadge.textContent = "✓ Suku Bunga Promo Fix di Awal (~5%)";
+                displayRateBadge.classList.remove('text-emerald-400');
+                displayRateBadge.classList.add('text-amber-300');
+                displayBankRec.textContent = "Mandiri, BTN, BRI, BCA";
+                schemeIcon.textContent = "🏦";
+                schemeTitle.textContent = "KPR Konvensional Promo";
+                schemeDesc.textContent = "Bunga rendah promo fix 3-5 tahun pertama bekerjasama dengan bank rekanan nasional terkemuka.";
+            }
+            calculateKPR();
+        }
+
+        function calculateKPR() {
+            const harga = parseFloat(inputHarga.value);
+            const dpPercent = parseFloat(inputDP.value);
+            const dpRupiah = harga * (dpPercent / 100);
+            const plafon = harga - dpRupiah;
+
+            displayHarga.textContent = formatRupiah(harga);
+            displayDP.textContent = `${dpPercent}% (${formatRupiah(dpRupiah)})`;
+            displayPlafon.textContent = formatRupiah(plafon);
+
+            let monthlyInstallment = 0;
+
+            if (plafon > 0) {
+                if (currentScheme === 'syariah') {
+                    // Margin Syariah Flat ~6.75% per tahun
+                    const marginFlat = 0.0675;
+                    const totalMargin = plafon * marginFlat * currentTenor;
+                    const totalBiaya = plafon + totalMargin;
+                    monthlyInstallment = totalBiaya / (currentTenor * 12);
+                } else {
+                    // Konvensional Anuitas 5% promo fix
+                    const annualRate = 0.05;
+                    const monthlyRate = annualRate / 12;
+                    const totalMonths = currentTenor * 12;
+                    monthlyInstallment = plafon * (monthlyRate / (1 - Math.pow(1 + monthlyRate, -totalMonths)));
+                }
+            }
+
+            displayCicilan.textContent = formatRupiah(monthlyInstallment);
+
+            const schemeName = currentScheme === 'syariah' ? 'KPR Syariah (Flat Murabahah)' : 'KPR Konvensional Promo';
+            const waMessage = `Halo Admin Sawangan Urban Homes, saya hitung di website simulasi properti seharga ${formatRupiah(harga)} dengan DP ${dpPercent}% tenor ${currentTenor} tahun skema ${schemeName} estimasi cicilan ${formatRupiah(monthlyInstallment)}/bln. Boleh minta detail bank dan brosur resminya?`;
+            btnKirimKPR.href = `https://wa.me/6281911590700?text=${encodeURIComponent(waMessage)}`;
+        }
+
+        function setTenor(years) {
+            currentTenor = years;
+            tenorButtons.forEach(btn => {
+                if (parseInt(btn.getAttribute('data-years')) === years) {
+                    btn.classList.add('bg-brand-500', 'border-brand-500', 'text-brand-900', 'font-extrabold');
+                    btn.classList.remove('text-slate-300', 'border-slate-700');
+                } else {
+                    btn.classList.remove('bg-brand-500', 'border-brand-500', 'text-brand-900', 'font-extrabold');
+                    btn.classList.add('text-slate-300', 'border-slate-700');
+                }
+            });
+            calculateKPR();
+        }
+
+        // 6. Floor Plan Switcher Logic
+        function switchFloor(floor) {
+            const svgFloor1 = document.getElementById('svgFloor1');
+            const svgFloor2 = document.getElementById('svgFloor2');
+            const tabFloor1 = document.getElementById('tabFloor1');
+            const tabFloor2 = document.getElementById('tabFloor2');
+            const blueprintTitle = document.getElementById('blueprintTitle');
+            const blueprintSubTitle = document.getElementById('blueprintSubTitle');
+            const specDetailTitle = document.getElementById('specDetailTitle');
+            const specListLantai1 = document.getElementById('specListLantai1');
+            const specListLantai2 = document.getElementById('specListLantai2');
+
+            if (floor === 1) {
+                svgFloor1.classList.remove('hidden');
+                svgFloor2.classList.add('hidden');
+                
+                tabFloor1.classList.add('bg-brand-900', 'text-white', 'shadow-md');
+                tabFloor1.classList.remove('text-slate-600');
+                tabFloor2.classList.remove('bg-brand-900', 'text-white', 'shadow-md');
+                tabFloor2.classList.add('text-slate-600');
+
+                blueprintTitle.textContent = "Denah Lantai 1 (Ground Floor)";
+                blueprintSubTitle.textContent = "BLUEPRINT ARSITEKTUR - LANTAI 1";
+                specDetailTitle.textContent = "Fasilitas Lantai 1";
+                specListLantai1.classList.remove('hidden');
+                specListLantai2.classList.add('hidden');
+            } else {
+                svgFloor1.classList.add('hidden');
+                svgFloor2.classList.remove('hidden');
+
+                tabFloor2.classList.add('bg-brand-900', 'text-white', 'shadow-md');
+                tabFloor2.classList.remove('text-slate-600');
+                tabFloor1.classList.remove('bg-brand-900', 'text-white', 'shadow-md');
+                tabFloor1.classList.add('text-slate-600');
+
+                blueprintTitle.textContent = "Denah Lantai 2 (Upper Floor)";
+                blueprintSubTitle.textContent = "BLUEPRINT ARSITEKTUR - LANTAI 2";
+                specDetailTitle.textContent = "Fasilitas Lantai 2";
+                specListLantai1.classList.add('hidden');
+                specListLantai2.classList.remove('hidden');
+            }
+        }
+
+        inputHarga.addEventListener('input', calculateKPR);
+        inputDP.addEventListener('input', calculateKPR);
+        calculateKPR();
+    </script>
+</body>
+</html>
