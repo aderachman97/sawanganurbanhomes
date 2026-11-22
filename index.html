@@ -1711,19 +1711,6 @@
         </div>
     </div>
 
-    <!-- RECENT ACTIVITY SOCIAL PROOF TOAST -->
-    <div id="socialProofToast" class="fixed bottom-24 sm:bottom-8 left-4 z-40 bg-white/95 backdrop-blur-md border border-slate-200 shadow-xl rounded-2xl p-3.5 max-w-xs transition duration-500 transform translate-y-24 opacity-0 pointer-events-none flex items-center gap-3">
-        <div class="w-9 h-9 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
-            <i data-lucide="bell" class="w-4 h-4"></i>
-        </div>
-        <div class="text-xs">
-            <span class="font-bold text-slate-900 block" id="toastName">Pak Hendra (Jaksel)</span>
-            <span class="text-slate-500 block text-[11px]" id="toastAction">Baru saja jadwalkan survey lokasi untuk Sabtu ini.</span>
-        </div>
-        <button onclick="hideSocialProofToast()" class="text-slate-400 hover:text-slate-600 ml-1">
-            <i data-lucide="x" class="w-3.5 h-3.5"></i>
-        </button>
-    </div>
 
     <!-- MODAL: LEAD QUALIFICATION / SURVEY BOOKING -->
     <div id="surveyModal" class="fixed inset-0 z-50 bg-slate-950/70 backdrop-blur-sm flex items-center justify-center p-4 opacity-0 invisible pointer-events-none transition-all duration-300">
@@ -1958,45 +1945,6 @@
         }
         startCountdown();
 
-        // 3. Social Proof Toast Generator (Runs every 18 seconds)
-        const sampleLeads = [
-            { name: "Pak Hendra (Jaksel)", action: "Baru saja jadwalkan survey lokasi untuk Sabtu ini." },
-            { name: "Ibu Desi (Depok)", action: "Mengklaim promo Free Biaya Notaris untuk Kavling 280 Jt." },
-            { name: "Bpk. Randy (Tangsel)", action: "Mengajukan simulasi KPR Rumah 2 Lantai Blok A." },
-            { name: "Ibu Maya (Jakarta)", action: "Menanyakan ketersediaan Kavling SHM 66m²." }
-        ];
-        let leadIndex = 0;
-
-        function showSocialProofToast() {
-            const toast = document.getElementById('socialProofToast');
-            const nameEl = document.getElementById('toastName');
-            const actionEl = document.getElementById('toastAction');
-            if (!toast || !nameEl || !actionEl) return;
-
-            const lead = sampleLeads[leadIndex % sampleLeads.length];
-            nameEl.textContent = lead.name;
-            actionEl.textContent = lead.action;
-            leadIndex++;
-
-            toast.classList.remove('translate-y-24', 'opacity-0', 'pointer-events-none');
-            toast.classList.add('translate-y-0', 'opacity-100');
-
-            setTimeout(() => {
-                hideSocialProofToast();
-            }, 5500);
-        }
-
-        function hideSocialProofToast() {
-            const toast = document.getElementById('socialProofToast');
-            if (!toast) return;
-            toast.classList.add('translate-y-24', 'opacity-0', 'pointer-events-none');
-            toast.classList.remove('translate-y-0', 'opacity-100');
-        }
-
-        setTimeout(() => {
-            showSocialProofToast();
-            setInterval(showSocialProofToast, 20000);
-        }, 5000);
 
         // 4. Modal Functions (Survey & Lightbox)
         let selectedSurveyDay = 'Sabtu Ini';
